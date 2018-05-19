@@ -1,0 +1,53 @@
+{
+  "name": "fora-research",
+  "version": "1.0.0",
+  "description": "Survey site for fora project",
+  "main": "next",
+  "author": "Diogo Vianna",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "next": "^5.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "recompose": "^0.26.0"
+  },
+  "devDependencies": {
+    "now": "^11.1.7",
+    "babel-plugin-module-resolver": "^3.1.1"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "pretest": "eslint --ignore-path/ .gitignore .",
+    "deploy": "now -e NODE_ENV=production -e MAILCHIMP_K=$MAILCHIMP_K --token $NOW_TOKEN --npm --public -T ofora",
+    "deploy:prod": "now -e NODE_ENV=production -e MAILCHIMP_K=$MAILCHIMP_K --token $NOW_TOKEN --npm",
+    "alias": "now alias fora-$TRAVIS_PULL_REQUEST_BRANCH$TRAVIS_BRANCH --token=$NOW_TOKEN -T ofora",
+    "alias:prod": "now alias ofora.org --token=$NOW_TOKEN && now alias www.ofora.org --token=$NOW_TOKEN"
+  },
+  "now": {
+    "name": "research-fora-org",
+    "alias": [
+      "fora-fora-org"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./"
+          ]
+        }
+      ]
+    ]
+  }
+}
