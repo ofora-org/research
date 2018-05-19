@@ -1,20 +1,18 @@
 import React from 'react'
 import Head from 'components/Head'
 import { Logo } from 'components/Icons'
-import Title from 'components/Title'
-import Subtitle from 'components/Subtitle'
+import Navigation from 'components/Navigation'
 import Survey1 from 'components/survey/Survey1'
 import Survey2 from 'components/survey/Survey2'
-import ContentWrapper from 'components/ContentWrapper'
 
 const Index = () =>
   <div className='page-wrapper'>
     <Head />
     <div className='logo'><Logo /></div>
-    <div className='navigation-wrapper'>
+    <Navigation>
       <Survey1 />
       <Survey2 />
-    </div>
+    </Navigation>
     <style jsx>{`
       .page-wrapper,
       .navigation-wrapper,
@@ -28,9 +26,6 @@ const Index = () =>
         top: 29px;
         z-index: 1000;
       }
-      .navigation-wrapper {
-        display: flex;
-      }
       .content-wrapper {
         min-width: 100%;
       }
@@ -43,7 +38,6 @@ const Index = () =>
           top: 35px;
           width: 114px;
         }
-
       }
     `}</style>
   </div>
