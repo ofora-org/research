@@ -13,7 +13,7 @@ const Content = () =>
   <div className='content'>
     <Title><span className='title'>Qual a importância dos espaços públicos de convívio* para sua vida na cidade?</span></Title>
     <Subtitle>Indique o grau na escala!</Subtitle>
-    {/*<SingleChoice choices={['Toda', 'Muita', 'Média', 'Pouca', 'Nenhuma']} />*/}
+    <SingleChoice choices={['Toda', 'Muita', 'Média', 'Pouca', 'Nenhuma']} />
     <style jsx>{`
       .content {
         display: flex;
