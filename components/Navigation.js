@@ -1,16 +1,8 @@
 import React from 'react'
-import { withState, withHandlers, lifecycle, compose } from 'recompose'
+import { withState, compose } from 'recompose'
 
 const enhance = compose(
-  withState('currentScreen', 'setScreen', 0),
-  // withHandlers({
-  //   onClickLeft: ({ children, setScreen, currentScreen }) => e => {
-  //     currentScreen === children.length ?
-  //   },
-  //   onClickRight: props => e => {
-  //
-  //   }
-  // })
+  withState('currentScreen', 'setScreen', 0)
 )
 
 const Navigation = ({children, currentScreen, setScreen}) =>
@@ -46,6 +38,7 @@ const Navigation = ({children, currentScreen, setScreen}) =>
         bottom: 20px;
         font-size: 80px;
         cursor: pointer;
+        transition: .5s right;
       }
       .control > span {
         padding: 0 10px
