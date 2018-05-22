@@ -2,7 +2,7 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import SingleChoice from 'components/SingleChoice'
+import SingleChoice from 'components/Choice/SingleChoice'
 
 const Survey1 = () =>
   <ContentWrapper
