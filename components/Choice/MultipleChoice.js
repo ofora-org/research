@@ -14,7 +14,7 @@ const MultipleChoice = ({handleClick, selected, ...props}) =>
         {choice}
       </Choice>
     )}
-    {props.other ? <Other /> : null}
+    {props.other ? <Other label={props.other} /> : null}
     <style jsx>{`
       div {
         display: flex;

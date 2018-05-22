@@ -11,23 +11,11 @@ const Survey4 = () =>
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Na sua opinião, quem deve participar das decisões sobre os espaços públicos de convívio* da cidade?</span></Title>
-    <Subtitle>Pode selecionar várias opções!</Subtitle>
-    <MultipleChoice
-      other='Outros, quem?'
-      choices={[
-        'Prefeitura ',
-        'Vereadores',
-        'Empresas',
-        'Especialistas técnicos',
-        'ONGs',
-        'Movimentos sociais',
-        'Associações de moradores',
-        'Cidadãos afetados pela decisão',
-        'Todo/qualquer cidadão',
-        'Outros, quem? [aberta]'
-      ]}
-    />
+    <Title><span className='title'>Em que ano você nasceu?</span></Title>
+    <Subtitle>Digite abaixo!</Subtitle>
+    <input type='text' maxLength={4} placeholder='0000' onKeyPress={handleKeyPress} />
+    <Title><span>Onde você nasceu?</span></Title>
+    <Subtitle>Selecione uma opção da lista!</Subtitle>
     <style jsx>{`
       .content {
         display: flex;
@@ -38,6 +26,9 @@ const Content = () =>
         padding-right: 90px;
         display: block;
       }
+      input {
+        margin-bottom: 20px;
+      }
       @media only screen and (min-width: 720px) {
         .title {
           padding-right: 140px;
@@ -45,5 +36,12 @@ const Content = () =>
       }
     `}</style>
   </div>
+
+  const handleKeyPress = e => {
+    // Ensure that it is not a number and stop the keypress
+    if (['1','2','3','4','5','6','7','8','9','0'].indexOf(e.key) === -1) {
+      e.preventDefault();
+    }
+  }
 
 export default Survey4

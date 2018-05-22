@@ -1,7 +1,6 @@
 import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
-import Subtitle from 'components/Subtitle'
 
 const Survey1 = () =>
   <ContentWrapper
@@ -12,7 +11,7 @@ const Survey1 = () =>
 const Content = () =>
   <div className='content'>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
-    <Subtitle>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</Subtitle>
+    <p>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</p>
     <style jsx>{`
       .title {
         font-size: 35px;

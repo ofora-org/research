@@ -2,11 +2,11 @@ import React from 'react'
 import { withState, withHandlers, compose } from 'recompose'
 import Choice from './Choice'
 
-const Other = ({handleClick, handleFocus, handleBlur, selected}) =>
+const Other = ({handleClick, handleFocus, handleBlur, selected, label}) =>
   <div>
     <div><div>
       <Choice onClick={handleClick} isSelected={selected}>
-        Outros:
+        {label}
       </Choice>
     </div></div>
     <input type='text' onFocus={handleFocus} onBlur={handleBlur} />
@@ -16,10 +16,6 @@ const Other = ({handleClick, handleFocus, handleBlur, selected}) =>
       }
       input {
         padding: 10px;
-        font-size: inherit;
-        color: inherit;
-        background: none;
-        border: none;
         opacity: ${selected ? '1' : '0'};
         margin: 5px 30px;
         transition: .2s opacity .1s;
@@ -45,7 +41,7 @@ export default compose(
     },
     handleBlur: ({setSelected, selected}) => e => {
       const input = e.target
-      input.value === '' && setTimeout(()=>setSelected(false), 1)
+      input.value === '' && setTimeout(()=>setSelected(false), 200)
     }
   })
 )(Other)

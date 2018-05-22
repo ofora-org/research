@@ -2,7 +2,7 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import MultipleChoice from 'components/Choice/MultipleChoice'
+import SingleChoice from 'components/Choice/SingleChoice'
 
 const Survey4 = () =>
   <ContentWrapper
@@ -11,21 +11,17 @@ const Survey4 = () =>
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Na sua opinião, quem deve participar das decisões sobre os espaços públicos de convívio* da cidade?</span></Title>
-    <Subtitle>Pode selecionar várias opções!</Subtitle>
-    <MultipleChoice
-      other='Outros, quem?'
+    <Title><span className='title'>Com qual gênero você se identifica?</span></Title>
+    <Subtitle>Selecione uma opção!</Subtitle>
+    <SingleChoice
+      other='Outro, me identifico como:'
       choices={[
-        'Prefeitura ',
-        'Vereadores',
-        'Empresas',
-        'Especialistas técnicos',
-        'ONGs',
-        'Movimentos sociais',
-        'Associações de moradores',
-        'Cidadãos afetados pela decisão',
-        'Todo/qualquer cidadão',
-        'Outros, quem? [aberta]'
+        'Mulher',
+        'Homem',
+        'Homem trans',
+        'Mulher trans',
+        'Travesti',
+        'Não binário'
       ]}
     />
     <style jsx>{`

@@ -14,7 +14,7 @@ const Content = () =>
     <div className='background' />
     <div>
       <Title><span className='title'>Suas respostas vão orientar as ações culturais e urbanísticas do Fora em centros e periferias de São Paulo.</span></Title>
-      <Subtitle>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</Subtitle>
+      <p>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</p>
     </div>
     <style jsx>{`
       .background {

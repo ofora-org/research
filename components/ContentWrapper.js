@@ -9,6 +9,8 @@ const ContentWrapper = ({left, right}) =>
     <style jsx>{`
       .content-wrapper {
         min-width: 100%;
+        font-size: 21px;
+        font-weight: 300;
       }
       .content-wrapper > div {
         flex: 1;

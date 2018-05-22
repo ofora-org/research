@@ -7,7 +7,7 @@ const CustomHead = () =>
       <title>Pesquisa Fora</title>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='theme-color' content='#ededed' />
-      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' rel='stylesheet' />
       {/*<meta property='og:type' content='article' />*/}
       <meta property='og:title' content='Pesquisa Fora' />
       <meta property='og:image' content='' />
@@ -21,6 +21,7 @@ const CustomHead = () =>
           margin: 0;
           background: #ededed;
           font-family: 'Source Sans Pro', sans-serif;
+          font-weight: normal;
         }
         img {
           max-width: 100%;
@@ -37,6 +38,24 @@ const CustomHead = () =>
         }
         a:visited { color: inherit; }
         a:focus, input:focus { outline: none; }
+        input {
+          font-size: inherit;
+          font-weight: 600;
+          font-family: inherit;
+          color: inherit;
+          background: none;
+          border: none;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1; /* Firefox */
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: white;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+        }
         @media only screen and (min-width: 720px) {
           body {
             min-width: 960px;
