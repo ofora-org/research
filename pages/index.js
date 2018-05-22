@@ -5,6 +5,7 @@ import Navigation from 'components/Navigation'
 import Survey1 from 'components/survey/Survey1'
 import Survey2 from 'components/survey/Survey2'
 import Survey3 from 'components/survey/Survey3'
+import Survey4 from 'components/survey/Survey4'
 
 const Index = () =>
   <div className='page-wrapper'>
@@ -14,6 +15,7 @@ const Index = () =>
       <Survey1 />
       <Survey2 />
       <Survey3 />
+      <Survey4 />
     </Navigation>
     <style jsx>{`
       .page-wrapper,
