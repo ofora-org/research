@@ -18,6 +18,8 @@ const Index = () =>
       <Survey2 />
       <Survey3 />
       <Survey4 />
+      <Survey5 />
+      <Survey6 />
     </Navigation>
     <style jsx>{`
       .page-wrapper,

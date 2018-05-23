@@ -5,12 +5,12 @@ const Title = ({children}) =>
     {children}
     <style jsx>{`
       div {
-        font-size: 29px;
+        font-size: 27px;
         font-weight: 900;
       }
       @media only screen and (min-width: 720px) {
         div {
-          font-size: 47px;
+          font-size: 43px;
         }
       }
     `}</style>

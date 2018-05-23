@@ -3,9 +3,17 @@ import { withState, withHandlers, compose } from 'recompose'
 import Choice from './Choice'
 import Other from './Other'
 
-const MultipleChoice = ({handleClick, selected, ...props}) =>
+const MultipleChoice = ({
+  other,
+  choices,
+  selected,
+  otherValue,
+  setOtherValue,
+  handleClick,
+  ...props
+}) =>
   <div className='wrapper'>
-    {props.choices.map((choice, i) =>
+    {choices.map((choice, i) =>
       <Choice
         key={i}
         isSelected={selected.indexOf(i) !== -1}
@@ -14,7 +22,15 @@ const MultipleChoice = ({handleClick, selected, ...props}) =>
         {choice}
       </Choice>
     )}
-    {props.other ? <Other label={props.other} /> : null}
+    {other ?
+      <Other
+        label={other}
+        onClick={()=>handleClick(choices.length)}
+        onChange={value=>setOtherValue(value)}
+        isSelected={selected.indexOf(choices.length) !== -1}
+        value={otherValue}
+      /> : null
+    }
     <style jsx>{`
       div {
         display: flex;
@@ -26,12 +42,16 @@ const MultipleChoice = ({handleClick, selected, ...props}) =>
 
 export default compose(
   withState('selected', 'setSelected', []),
+  withState('otherValue', 'setOtherValue', ''),
   withHandlers({
-    handleClick: ({setSelected, selected}) => i => {
+    handleClick: ({choices, setSelected, selected, setOtherValue}) => i => {
       const pos = selected.indexOf(i);
-      pos === -1 ?
-        setSelected([...selected, i]) :
+      if (pos === -1) {
+        setSelected([...selected, i])
+      } else {
         setSelected(selected.filter((_, filterPos) => filterPos !== pos))
+        if (i === choices.length) setOtherValue('')
+      }
     },
   })
 )(MultipleChoice)

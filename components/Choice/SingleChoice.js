@@ -3,18 +3,33 @@ import { withState, withHandlers, compose } from 'recompose'
 import Choice from './Choice'
 import Other from './Other'
 
-const SingleChoice = ({choices, handleClick, selected, ...props}) =>
+const SingleChoice = ({
+  choices,
+  other,
+  selected,
+  otherValue,
+  setOtherValue,
+  handleClick
+}) =>
   <div className='wrapper'>
     {choices.map((choice, i) =>
       <Choice
         key={i}
         isSelected={selected === i}
-        onClick={()=>handleClick(i)}
+        onClick={()=>{handleClick(i)}}
       >
         {choice}
       </Choice>
     )}
-    {props.other ? <Other label={props.other} /> : null}
+    {other ?
+      <Other
+        label={other}
+        onClick={()=>handleClick(choices.length)}
+        onChange={value=>setOtherValue(value)}
+        isSelected={selected === choices.length}
+        value={otherValue}
+      /> : null
+    }
     <style jsx>{`
       div {
         display: flex;
@@ -26,9 +41,11 @@ const SingleChoice = ({choices, handleClick, selected, ...props}) =>
 
 export default compose(
   withState('selected', 'setSelected', null),
+  withState('otherValue', 'setOtherValue', ''),
   withHandlers({
-    handleClick: ({setSelected}) => i => {
+    handleClick: ({setSelected, setOtherValue, choices}) => i => {
       setSelected(i)
-    },
+      if (i !== choices.length) setOtherValue('')
+    }
   })
 )(SingleChoice)

@@ -3,12 +3,12 @@ const Choice = ({children, onClick, isSelected}) =>
     {children}
     <style jsx>{`
       div {
-        padding: 13px;
+        padding: 12px;
         background: ${isSelected ? 'red' : '#bfbfbf' };
         cursor: pointer;
         color: white;
         font-weight: 600;
-        margin: 5px 30px;
+        margin: 4px 30px;
         transition: .2s background;
       }
     `}</style>
