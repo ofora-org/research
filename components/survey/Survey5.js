@@ -3,6 +3,7 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import MultipleChoice from 'components/Choice/MultipleChoice'
+import CountryAndState from 'components/CountryAndState'
 
 const Survey4 = () =>
   <ContentWrapper
@@ -16,6 +17,7 @@ const Content = () =>
     <input type='text' maxLength={4} placeholder='0000' onKeyPress={handleKeyPress} />
     <Title><span>Onde você nasceu?</span></Title>
     <Subtitle>Selecione uma opção da lista!</Subtitle>
+    <CountryAndState />
     <style jsx>{`
       .content {
         display: flex;
