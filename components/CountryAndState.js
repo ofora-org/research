@@ -232,6 +232,7 @@ const Title = ({children, value, handleChange}) =>
         border-bottom: 2px solid white;
         font-family: inherit;
         font-size: inherit;
+        color: inherit;
         outline: none;
       }
     `}</style>

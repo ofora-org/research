@@ -4,24 +4,23 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey6 = () =>
+const Survey7 = () =>
   <ContentWrapper
     left={<Content />}
   />
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Com qual gênero você se identifica?</span></Title>
+    <Title><span className='title'>Com qual cor ou raça você se identifica?</span></Title>
     <Subtitle>Selecione uma opção!</Subtitle>
     <SingleChoice
       other='Outro, me identifico como:'
       choices={[
-        'Mulher',
-        'Homem',
-        'Homem trans',
-        'Mulher trans',
-        'Travesti',
-        'Não binário'
+        'Asiática',
+        'Branca',
+        'Negra/preta',
+        'Indígena',
+        'Árabe'
       ]}
     />
     <style jsx>{`
@@ -42,4 +41,4 @@ const Content = () =>
     `}</style>
   </div>
 
-export default Survey6
+export default Survey7

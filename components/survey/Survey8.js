@@ -2,26 +2,34 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import SingleChoice from 'components/Choice/SingleChoice'
+import MultipleChoice from 'components/Choice/MultipleChoice'
 
-const Survey6 = () =>
+const Survey8 = () =>
   <ContentWrapper
     left={<Content />}
   />
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Com qual gênero você se identifica?</span></Title>
-    <Subtitle>Selecione uma opção!</Subtitle>
-    <SingleChoice
-      other='Outro, me identifico como:'
+    <Title><span className='title'>Quais canais de comunicação você costuma utilizar?</span></Title>
+    <Subtitle>Pode selecionar várias opções!</Subtitle>
+    <MultipleChoice
+      other='Outros:'
       choices={[
-        'Mulher',
-        'Homem',
-        'Homem trans',
-        'Mulher trans',
-        'Travesti',
-        'Não binário'
+        'WhatsApp',
+        'Facebook',
+        'Instagram',
+        'Twitter',
+        'Youtube',
+        'Jornal impresso grátis',
+        'Jornal impresso pago',
+        'Site de notícias',
+        'Revista',
+        'TV aberta',
+        'TV paga',
+        'Rádio',
+        'Podcast',
+        'Boca a boca'
       ]}
     />
     <style jsx>{`
@@ -42,4 +50,4 @@ const Content = () =>
     `}</style>
   </div>
 
-export default Survey6
+export default Survey8

@@ -44,14 +44,14 @@ export default compose(
   withState('selected', 'setSelected', []),
   withState('otherValue', 'setOtherValue', ''),
   withHandlers({
-    handleClick: ({choices, setSelected, selected, setOtherValue}) => i => {
+    handleClick: ({max, choices, setSelected, selected, setOtherValue}) => i => {
       const pos = selected.indexOf(i);
       if (pos === -1) {
-        setSelected([...selected, i])
-      } else {
-        setSelected(selected.filter((_, filterPos) => filterPos !== pos))
-        if (i === choices.length) setOtherValue('')
+        if (max && max === selected.length) return
+        return setSelected([...selected, i])
       }
-    },
+      setSelected(selected.filter((_, filterPos) => filterPos !== pos))
+      if (i === choices.length) setOtherValue('')
+    }
   })
 )(MultipleChoice)
