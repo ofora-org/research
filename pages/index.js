@@ -49,7 +49,7 @@ const Index = () =>
       }
       @media only screen and (min-width: 720px) {
         .logo {
-          top: 35px;
+          top: 45px;
           width: 114px;
         }
       }

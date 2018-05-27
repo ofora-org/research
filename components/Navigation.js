@@ -7,6 +7,7 @@ const enhance = compose(
 
 const Navigation = ({children, currentScreen, setScreen}) =>
   <div className='wrapper'>
+    <div className='navigationBar' />
     <div className='navigationWrapper'>
       {children}
     </div>
@@ -23,6 +24,16 @@ const Navigation = ({children, currentScreen, setScreen}) =>
         height: 100%;
         width: 100%;
         overflow: hidden;
+      }
+      .navigationBar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 15px;
+        background: red;
+        width: ${(currentScreen+1)/children.length*100}%;
+        z-index: 900;
+        transition: 1.3s width 0.1s;
       }
       .navigationWrapper {
         display: flex;

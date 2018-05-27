@@ -15,6 +15,7 @@ const ContentWrapper = ({left, right}) =>
       .content-wrapper > div {
         flex: 1;
         padding: 20px;
+        padding-top: 35px;
         position: relative;
       }
       .content-wrapper > div:first-child {
