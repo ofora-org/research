@@ -45,6 +45,7 @@ const CustomHead = () =>
           color: inherit;
           background: none;
           border: none;
+          margin: 0;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: white;
