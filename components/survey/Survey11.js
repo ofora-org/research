@@ -13,10 +13,14 @@ const Content = () =>
   <div className='content'>
     <Title><span className='title'>Qual seu CEP?</span></Title>
     <Subtitle>Não se preocupe, não é possível ter seu endereço completo pelo CEP! Serve apenas para saber aproximadamente a área da cidade que você mora!</Subtitle>
-    <label>Meu CEP é:</label>
-    <CEPInput />
-    <label>Não sei ou não quero dar meu CEP, mas moro em:</label>
-    <input type='text' maxLength={60} placeholder='Nome da área/bairro' />
+    <div className='formGroup'>
+      <label>Meu CEP é:</label>
+      <CEPInput />
+    </div>
+    <div className='formGroup'>
+      <label>Não sei ou não quero dar meu CEP, mas moro em:</label>
+      <input type='text' maxLength={60} placeholder='Nome da área/bairro' />
+    </div>
     <style jsx>{`
       .content {
         display: flex;
@@ -25,6 +29,12 @@ const Content = () =>
       }
       .title {
         padding-right: 90px;
+        display: block;
+      }
+      .formGroup {
+        margin-bottom: 1em;
+      }
+      label {
         display: block;
       }
       @media only screen and (min-width: 720px) {

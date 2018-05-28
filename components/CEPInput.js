@@ -6,7 +6,7 @@ const CEPInput = ({children, value, handleChange}) =>
   <div className='root'>
     <div>
       <div><InputMask mask="99999-999" maskChar="" placeholder='00000-000' /></div>
-      <a href='www.google.com'>Buscar CEP</a>
+      <a href='http://www.buscacep.correios.com.br/sistemas/buscacep/' target='_blank'>Buscar CEP</a>
     </div>
     <style jsx>{`
       .root {
@@ -14,6 +14,7 @@ const CEPInput = ({children, value, handleChange}) =>
       }
       a {
         font-size: 16px;
+        display: block;
       }
     `}</style>
   </div>

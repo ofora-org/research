@@ -12,7 +12,7 @@ const Content = () =>
   <div className='content'>
     <Title><span className='title'>Qual é o espaço público de convívio* que você frequenta mais perto da sua casa?</span></Title>
     <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
-    <input type='text' maxLength={60} placeholder='Digite aqui o local ou ponto próximo.' />
+    <input type='text' maxLength={60} placeholder='Digite aqui a resposta.' />
     <style jsx>{`
       .content {
         display: flex;

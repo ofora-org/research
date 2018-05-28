@@ -1,4 +1,6 @@
 import React from 'react'
+import { withState, compose } from 'recompose'
+
 import Head from 'components/Head'
 import { Logo } from 'components/Icons'
 import Navigation from 'components/Navigation'
@@ -15,24 +17,26 @@ import Survey10 from 'components/survey/Survey10'
 import Survey11 from 'components/survey/Survey11'
 import Survey12 from 'components/survey/Survey12'
 
-const Index = () =>
+const Index = ({value, setValue}) =>
   <div className='page-wrapper'>
     <Head />
-    <div className='logo'><Logo /></div>
-    <Navigation>
-      <Survey1 />
-      <Survey2 />
-      <Survey3 />
-      <Survey4 />
-      <Survey5 />
-      <Survey6 />
-      <Survey7 />
-      <Survey8 />
-      <Survey9 />
-      <Survey10 />
-      <Survey11 />
-      <Survey12 />
-    </Navigation>
+    <div className='logo'>{value[4]}<Logo /></div>
+    <Navigation
+      children={[
+        <Survey1 onChange={value=>setValue({...value, 1: value})} />,
+        <Survey2 onChange={value=>setValue({...value, 2: value})} />,
+        <Survey3 onChange={value=>setValue({...value, 3: value})} />,
+        <Survey4 onChange={value=>setValue({...value, 4: value})} />,
+        <Survey5 onChange={value=>setValue({...value, 5: value})} />,
+        <Survey6 onChange={value=>setValue({...value, 6: value})} />,
+        <Survey7 onChange={value=>setValue({...value, 7: value})} />,
+        <Survey8 onChange={value=>setValue({...value, 8: value})} />,
+        <Survey9 onChange={value=>setValue({...value, 9: value})} />,
+        <Survey10 onChange={value=>setValue({...value, 10: value})} />,
+        ...(value[10] && value[10].includes('Moro') ? [<Survey11 onChange={value=>setValue({...value, 11: value})} />] : []),
+        <Survey12 onChange={value=>setValue({...value, 12: value})} />
+      ]}
+    />
     <style jsx>{`
       .page-wrapper,
       .navigation-wrapper,
@@ -46,13 +50,6 @@ const Index = () =>
         top: 29px;
         z-index: 1000;
       }
-      .content-wrapper {
-        min-width: 100%;
-      }
-      .content-wrapper > div {
-        flex: 1;
-        padding: 20px;
-      }
       @media only screen and (min-width: 720px) {
         .logo {
           top: 45px;
@@ -62,4 +59,6 @@ const Index = () =>
     `}</style>
   </div>
 
-export default Index
+export default compose(
+  withState('value', 'setValue', {}),
+)(Index)

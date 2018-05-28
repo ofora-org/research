@@ -10,6 +10,7 @@ const MultipleChoice = ({
   otherValue,
   setOtherValue,
   handleClick,
+  handleChange,
   ...props
 }) =>
   <div className='wrapper'>
@@ -26,7 +27,7 @@ const MultipleChoice = ({
       <Other
         label={other}
         onClick={()=>handleClick(choices.length)}
-        onChange={value=>setOtherValue(value)}
+        onChange={handleChange}
         isSelected={selected.indexOf(choices.length) !== -1}
         value={otherValue}
       /> : null
@@ -44,14 +45,29 @@ export default compose(
   withState('selected', 'setSelected', []),
   withState('otherValue', 'setOtherValue', ''),
   withHandlers({
-    handleClick: ({max, choices, setSelected, selected, setOtherValue}) => i => {
-      const pos = selected.indexOf(i);
-      if (pos === -1) {
-        if (max && max === selected.length) return
-        return setSelected([...selected, i])
-      }
-      setSelected(selected.filter((_, filterPos) => filterPos !== pos))
-      if (i === choices.length) setOtherValue('')
+    handleClick: ({
+      max,
+      choices,
+      setSelected,
+      selected,
+      otherValue,
+      setOtherValue,
+      onChange
+    }) => i => {
+      const pos = selected.indexOf(i)
+      const isSelected = pos !== -1
+      if (isSelected && max && max === selected.length) return
+      const newSelected = isSelected ?
+        selected.filter((_, filterPos) => filterPos !== pos) :
+        [...selected, i]
+      const newOtherValue = isSelected && i === choices.length ? '' : otherValue
+      setSelected(newSelected)
+      setOtherValue(newOtherValue)
+      onChange && onChange(newSelected.map(i=>i == choices.length ? otherValue : choices[i]))
+    },
+    handleChange: ({choices, setOtherValue, selected, onChange}) => value => {
+      setOtherValue(value)
+      onChange && onChange(selected.map(i=>i == choices.length ? value : choices[i]))
     }
   })
 )(MultipleChoice)
