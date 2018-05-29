@@ -16,6 +16,7 @@ import Survey9 from 'components/survey/Survey9'
 import Survey10 from 'components/survey/Survey10'
 import Survey11 from 'components/survey/Survey11'
 import Survey12 from 'components/survey/Survey12'
+import Survey13 from 'components/survey/Survey13'
 
 const Index = ({value, setValue}) =>
   <div className='page-wrapper'>
@@ -34,7 +35,8 @@ const Index = ({value, setValue}) =>
         <Survey9 onChange={value=>setValue({...value, 9: value})} />,
         <Survey10 onChange={value=>setValue({...value, 10: value})} />,
         ...(value[10] && value[10].includes('Moro') ? [<Survey11 onChange={value=>setValue({...value, 11: value})} />] : []),
-        <Survey12 onChange={value=>setValue({...value, 12: value})} />
+        ...(value[10] && value[10].includes('Moro') ? [<Survey12 onChange={value=>setValue({...value, 12: value})} />] : []),
+        ...(value[10] && value[10].includes('Moro') ? [<Survey13 onChange={value=>setValue({...value, 13: value})} />] : []),
       ]}
     />
     <style jsx>{`
