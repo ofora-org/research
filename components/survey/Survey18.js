@@ -10,8 +10,8 @@ const Survey12 = () =>
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Qual é o espaço público de convívio* que você frequenta mais perto da sua casa?</span></Title>
-    <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
+    <Title><span className='title'>O que você costuma fazer quando visita São Paulo?</span></Title>
+    <Subtitle>Pode usar só palavras-chave, é rápido!</Subtitle>
     <input type='text' placeholder='Digite aqui a resposta.' />
     <style jsx>{`
       .content {

@@ -36,7 +36,6 @@ const Index = ({value, setValue}) =>
         <Survey10 onChange={value=>setValue({...value, 10: value})} />,
         ...(value[10] && value[10].includes('Moro') ? [<Survey11 onChange={value=>setValue({...value, 11: value})} />] : []),
         ...(value[10] && value[10].includes('Moro') ? [<Survey12 onChange={value=>setValue({...value, 12: value})} />] : []),
-        ...(value[10] && value[10].includes('Moro') ? [<Survey13 onChange={value=>setValue({...value, 13: value})} />] : []),
       ]}
     />
     <style jsx>{`

@@ -10,9 +10,8 @@ const Survey12 = () =>
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Qual é o espaço público de convívio* que você frequenta mais perto da sua casa?</span></Title>
-    <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
-    <input type='text' placeholder='Digite aqui a resposta.' />
+    <Title><span className='title'>Por onde você circula em São Paulo?</span></Title>
+    <Subtitle>No mapa de Prefeitura Regionais de São Paulo, selecione quais regiões você frequenta em geral, mesmo que seja uma aproximação! Pode selecionar várias regiões!</Subtitle>
     <style jsx>{`
       .content {
         display: flex;
