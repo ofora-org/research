@@ -20,12 +20,14 @@ import Survey13 from 'components/survey/Survey13'
 import Survey14 from 'components/survey/Survey14'
 import Survey15 from 'components/survey/Survey15'
 import Survey16 from 'components/survey/Survey16'
+import Survey17 from 'components/survey/Survey17'
+import Survey18 from 'components/survey/Survey18'
 
 
 const Index = ({value, setValue}) =>
   <div className='page-wrapper'>
     <Head />
-    <div className='logo'>{value[4]}<Logo /></div>
+    <div className='logo'><Logo /></div>
     <Navigation
       children={[
         <Survey1 onChange={value=>setValue({...value, 1: value})} />,
@@ -43,7 +45,9 @@ const Index = ({value, setValue}) =>
         <Survey13 onChange={value=>setValue({...value, 13: value})} />,
         <Survey14 onChange={value=>setValue({...value, 14: value})} />,
         <Survey15 onChange={value=>setValue({...value, 15: value})} />,
-
+        ...(value[14] && (value[14] === '1 vez a cada 2 semanas' || value[14] === '1 vez por mês ou menos') ? [<Survey16 onChange={value=>setValue({...value, 16: value})} />] : []),
+        ...(value[10] && value[10].includes('Visito') ? [<Survey17 onChange={value=>setValue({...value, 17: value})} />] : []),
+        ...(value[10] && value[10].includes('Visito') ? [<Survey18 onChange={value=>setValue({...value, 18: value})} />] : []),
       ]}
     />
     <style jsx>{`

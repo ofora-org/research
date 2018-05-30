@@ -43,9 +43,10 @@ export default compose(
   withState('selected', 'setSelected', null),
   withState('otherValue', 'setOtherValue', ''),
   withHandlers({
-    handleClick: ({setSelected, setOtherValue, choices}) => i => {
+    handleClick: ({setSelected, otherValue, setOtherValue, choices, onChange}) => i => {
       setSelected(i)
       if (i !== choices.length) setOtherValue('')
+      onChange && onChange(i === choices.length ? otherValue : choices[i])
     }
   })
 )(SingleChoice)
