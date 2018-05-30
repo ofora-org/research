@@ -22,7 +22,7 @@ import Survey15 from 'components/survey/Survey15'
 import Survey16 from 'components/survey/Survey16'
 import Survey17 from 'components/survey/Survey17'
 import Survey18 from 'components/survey/Survey18'
-
+import Survey19 from 'components/survey/Survey19'
 
 const Index = ({value, setValue}) =>
   <div className='page-wrapper'>
@@ -48,6 +48,7 @@ const Index = ({value, setValue}) =>
         ...(value[14] && (value[14] === '1 vez a cada 2 semanas' || value[14] === '1 vez por mês ou menos') ? [<Survey16 onChange={value=>setValue({...value, 16: value})} />] : []),
         ...(value[10] && value[10].includes('Visito') ? [<Survey17 onChange={value=>setValue({...value, 17: value})} />] : []),
         ...(value[10] && value[10].includes('Visito') ? [<Survey18 onChange={value=>setValue({...value, 18: value})} />] : []),
+        <Survey19 onChange={value=>setValue({...value, 19: value})} />
       ]}
     />
     <style jsx>{`

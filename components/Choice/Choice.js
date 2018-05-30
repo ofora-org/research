@@ -10,6 +10,7 @@ const Choice = ({children, onClick, isSelected}) =>
         font-weight: 600;
         margin: 4px 30px;
         transition: .2s background;
+        max-width: 230px
       }
     `}</style>
   </div>
