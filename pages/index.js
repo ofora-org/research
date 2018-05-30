@@ -17,6 +17,10 @@ import Survey10 from 'components/survey/Survey10'
 import Survey11 from 'components/survey/Survey11'
 import Survey12 from 'components/survey/Survey12'
 import Survey13 from 'components/survey/Survey13'
+import Survey14 from 'components/survey/Survey14'
+import Survey15 from 'components/survey/Survey15'
+import Survey16 from 'components/survey/Survey16'
+
 
 const Index = ({value, setValue}) =>
   <div className='page-wrapper'>
@@ -34,8 +38,12 @@ const Index = ({value, setValue}) =>
         <Survey8 onChange={value=>setValue({...value, 8: value})} />,
         <Survey9 onChange={value=>setValue({...value, 9: value})} />,
         <Survey10 onChange={value=>setValue({...value, 10: value})} />,
-        ...(value[10] && value[10].includes('Moro') ? [<Survey11 onChange={value=>setValue({...value, 11: value})} />] : []),
-        ...(value[10] && value[10].includes('Moro') ? [<Survey12 onChange={value=>setValue({...value, 12: value})} />] : []),
+        <Survey11 onChange={value=>setValue({...value, 11: value})} />,
+        <Survey12 onChange={value=>setValue({...value, 12: value})} />,
+        <Survey13 onChange={value=>setValue({...value, 13: value})} />,
+        <Survey14 onChange={value=>setValue({...value, 14: value})} />,
+        <Survey15 onChange={value=>setValue({...value, 15: value})} />,
+
       ]}
     />
     <style jsx>{`
@@ -63,3 +71,5 @@ const Index = ({value, setValue}) =>
 export default compose(
   withState('value', 'setValue', {}),
 )(Index)
+
+//...(value[10] && value[10].includes('Moro') ? [<Survey13 onChange={value=>setValue({...value, 13: value})} />] : []),
