@@ -23,7 +23,6 @@ const Navigation = ({children, currentScreen, setScreen}) =>
       .wrapper {
         height: 100%;
         width: 100%;
-        overflow: hidden;
       }
       .navigationBar {
         position: fixed;
@@ -53,6 +52,14 @@ const Navigation = ({children, currentScreen, setScreen}) =>
       }
       .control > span {
         padding: 0 10px
+      }
+      @media only screen and (min-width: 720px) {
+        .wrapper {
+          overflow: hidden;
+        }
+        .control {
+          
+        }
       }
     `}</style>
   </div>

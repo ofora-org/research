@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContentWrapper = ({left, right}) =>
+const ContentWrapper = ({left, right, midpoint}) =>
   <div className='content-wrapper'>
     <div>
       {left}
@@ -21,6 +21,7 @@ const ContentWrapper = ({left, right}) =>
       .content-wrapper > div:first-child {
         min-height: 50vh;
         box-sizing: border-box;
+        flex: ${midpoint ? midpoint*2 : 1}
       }
       @media only screen and (min-width: 720px) {
         .content-wrapper {

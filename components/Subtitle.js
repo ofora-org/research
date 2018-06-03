@@ -4,11 +4,14 @@ const Subtitle = ({children}) =>
   <p>
     {children}
     <style jsx>{`
+      p {
+        font-size: 14px;
+        color: #bfbfbf;
+        margin-top: .4em;
+      }
       @media only screen and (min-width: 720px) {
         p {
           font-size: 16px;
-          color: #bfbfbf;
-          margin-top: .5em;
           padding-left: 3px;
         }
       }

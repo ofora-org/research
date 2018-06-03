@@ -3,6 +3,7 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import CEPInput from 'components/CEPInput'
+import MultipleChoice from 'components/Choice/MultipleChoice'
 
 const Survey11 = () =>
   <ContentWrapper
