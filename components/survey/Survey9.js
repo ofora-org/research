@@ -4,12 +4,12 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import MultipleChoice from 'components/Choice/MultipleChoice'
 
-const Survey9 = () =>
+const Survey9 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Quais palavras melhor representam sua experiência nos espaços públicos de convívio* de São Paulo?</span></Title>
     <Subtitle>Selecione as três melhores opções pra você!</Subtitle>
@@ -33,6 +33,8 @@ const Content = () =>
         'Diversidade',
         'Diversão'
       ]}
+      onChange={value => onChange(9,value)}
+      value={value}
     />
     <style jsx>{`
       .content {

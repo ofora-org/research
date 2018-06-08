@@ -4,12 +4,12 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey6 = () =>
+const Survey6 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Com qual gênero você se identifica?</span></Title>
     <Subtitle>Selecione uma opção!</Subtitle>
@@ -23,6 +23,8 @@ const Content = () =>
         'Travesti',
         'Não binário'
       ]}
+      onChange={itemValue => onChange(6,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {

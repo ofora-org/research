@@ -4,12 +4,12 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import MultipleChoice from 'components/Choice/MultipleChoice'
 
-const Survey8 = () =>
+const Survey8 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Quais canais de comunicação você costuma utilizar?</span></Title>
     <Subtitle>Pode selecionar várias opções!</Subtitle>
@@ -31,6 +31,8 @@ const Content = () =>
         'Podcast',
         'Boca a boca'
       ]}
+      onChange={itemValue => onChange(8,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {

@@ -4,12 +4,12 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import CountryAndStateInput from 'components/CountryAndStateInput'
 
-const Survey4 = () =>
+const Survey4 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props}/>}
   />
 
-const Content = () =>
+  const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Em que ano você nasceu?</span></Title>
     <Subtitle>Digite abaixo!</Subtitle>

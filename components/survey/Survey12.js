@@ -3,16 +3,16 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 
-const Survey12 = () =>
+const Survey12 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Qual é o espaço público de convívio* que você frequenta mais perto da sua casa?</span></Title>
     <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
-    <input type='text' placeholder='Digite aqui a resposta.' />
+    <input type='text' placeholder='Digite aqui a resposta.' onChange={e => onChange(12,e.target.value)} value={value} />
     <style jsx>{`
       .content {
         display: flex;

@@ -9,7 +9,7 @@ const Survey20 = (props) =>
     left={<Content {...props} />}
   />
 
-const Content = ({onChange}) =>
+const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Quais meios de transporte você costuma usar para circular em São Paulo?</span></Title>
     <Subtitle>Pode selecionar várias opções!</Subtitle>
@@ -27,7 +27,8 @@ const Content = ({onChange}) =>
         'Trem'
       ]}
       other='Outros, qual?'
-      onChange={onChange}
+      onChange={itemValue => onChange(20,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {

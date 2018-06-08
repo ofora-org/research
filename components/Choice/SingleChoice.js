@@ -4,19 +4,17 @@ import Choice from './Choice'
 import Other from './Other'
 
 const SingleChoice = ({
+  value,
+  onChange,
   choices,
-  other,
-  selected,
-  otherValue,
-  setOtherValue,
-  handleClick
+  other
 }) =>
   <div className='wrapper'>
     {choices.map((choice, i) =>
       <Choice
-        key={i}
-        isSelected={selected === i}
-        onClick={()=>{handleClick(i)}}
+        key={choice}
+        isSelected={value === choice}
+        onClick={()=>onChange(choice)}
       >
         {choice}
       </Choice>
@@ -24,10 +22,10 @@ const SingleChoice = ({
     {other ?
       <Other
         label={other}
-        onClick={()=>handleClick(choices.length)}
-        onChange={value=>setOtherValue(value)}
-        isSelected={selected === choices.length}
-        value={otherValue}
+        onClick={()=>onChange('')}
+        onChange={value=>onChange(value)}
+        isSelected={value && !choices.includes(value)}
+        value={value}
       /> : null
     }
     <style jsx>{`
@@ -43,10 +41,11 @@ export default compose(
   withState('selected', 'setSelected', null),
   withState('otherValue', 'setOtherValue', ''),
   withHandlers({
-    handleClick: ({setSelected, otherValue, setOtherValue, choices, onChange}) => i => {
-      setSelected(i)
-      if (i !== choices.length) setOtherValue('')
-      onChange && onChange(i === choices.length ? otherValue : choices[i])
+    handleClick: ({setSelected, otherValue, setOtherValue, choices, onChange}) => choice => {
+      //setSelected(i)
+      console.log(this)
+      //if (i !== choices.length) setOtherValue('')
+      //onChange && onChange(i === choices.length ? otherValue : choices[i])
     }
   })
 )(SingleChoice)

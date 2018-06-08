@@ -9,14 +9,14 @@ const Survey4 = (props) =>
     left={<Content {...props} />}
   />
 
-const Content = ({onChange}) =>
+const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Na sua opinião, quem deve participar das decisões sobre os espaços públicos de convívio* da cidade?</span></Title>
     <Subtitle>Pode selecionar várias opções!</Subtitle>
     <MultipleChoice
       other='Outros, quem?'
       choices={[
-        'Prefeitura ',
+        'Prefeitura',
         'Vereadores',
         'Empresas',
         'Especialistas técnicos',
@@ -26,7 +26,8 @@ const Content = ({onChange}) =>
         'Cidadãos afetados pela decisão',
         'Todo/qualquer cidadão'
       ]}
-      onChange={onChange}
+      onChange={itemValue => onChange(4,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {

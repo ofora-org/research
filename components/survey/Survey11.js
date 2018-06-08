@@ -4,12 +4,12 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import CEPInput from 'components/CEPInput'
 
-const Survey11 = () =>
+const Survey11 = (props) =>
   <ContentWrapper
-    left={<Content />}
+   left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Qual seu CEP?</span></Title>
     <Subtitle>Não se preocupe, não é possível ter seu endereço completo pelo CEP! Serve apenas para saber aproximadamente a área da cidade que você mora!</Subtitle>

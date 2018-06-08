@@ -6,10 +6,10 @@ import SingleChoice from 'components/Choice/SingleChoice'
 
 const Survey14 = (props) =>
   <ContentWrapper
-    left={<Content {...props} />}
+   left={<Content {...props} />}
   />
 
-const Content = ({onChange}) =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Nos últimos 3 meses, com que frequência você saiu para curtir* a cidade de São Paulo? </span></Title>
     <Subtitle>Selecione uma opção abaixo!</Subtitle>
@@ -21,7 +21,8 @@ const Content = ({onChange}) =>
         '1 vez a cada 2 semanas',
         '1 vez por mês ou menos'
       ]}
-      onChange={onChange}
+      onChange={itemValue => onChange(14,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {

@@ -4,17 +4,19 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey1 = () =>
+const Survey1 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Qual a importância dos espaços públicos de convívio* para sua vida na cidade?</span></Title>
     <Subtitle>Indique o grau na escala!</Subtitle>
     <SingleChoice
       choices={['Toda', 'Muita', 'Média', 'Pouca', 'Nenhuma']}
+      onChange={itemValue => onChange(3,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {

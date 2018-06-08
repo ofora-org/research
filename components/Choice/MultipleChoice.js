@@ -6,19 +6,17 @@ import Other from './Other'
 const MultipleChoice = ({
   other,
   choices,
-  selected,
-  otherValue,
-  setOtherValue,
   handleClick,
   handleChange,
+  value,
   ...props
 }) =>
   <div className='wrapper'>
     {choices.map((choice, i) =>
       <Choice
-        key={i}
-        isSelected={selected.indexOf(i) !== -1}
-        onClick={()=>handleClick(i)}
+        key={choice}
+        isSelected={value && value.indexOf(choice) !== -1}
+        onClick={()=>handleClick(choice)}
       >
         {choice}
       </Choice>
@@ -26,10 +24,10 @@ const MultipleChoice = ({
     {other ?
       <Other
         label={other}
-        onClick={()=>handleClick(choices.length)}
+        onClick={()=>handleClick((value && value.find(el => choices.indexOf(el) < 0) || ''))}
         onChange={handleChange}
-        isSelected={selected.indexOf(choices.length) !== -1}
-        value={otherValue}
+        isSelected={value && typeof value.find(el => choices.indexOf(el) < 0) === 'string'}
+        value={value && value.find(el => choices.indexOf(el) < 0)}
       /> : null
     }
     <style jsx>{`
@@ -42,32 +40,27 @@ const MultipleChoice = ({
   </div>
 
 export default compose(
-  withState('selected', 'setSelected', []),
-  withState('otherValue', 'setOtherValue', ''),
   withHandlers({
     handleClick: ({
       max,
       choices,
-      setSelected,
-      selected,
-      otherValue,
-      setOtherValue,
+      value,
       onChange
-    }) => i => {
-      const pos = selected.indexOf(i)
-      const isSelected = pos !== -1
-      if (isSelected && max && max === selected.length) return
-      const newSelected = isSelected ?
-        selected.filter((_, filterPos) => filterPos !== pos) :
-        [...selected, i]
-      const newOtherValue = isSelected && i === choices.length ? '' : otherValue
-      setSelected(newSelected)
-      setOtherValue(newOtherValue)
-      onChange && onChange(newSelected.map(i=>i == choices.length ? otherValue : choices[i]))
+    }) => choice => {
+      const isSelected = value && value.includes(choice)
+      if (!isSelected && value && max === value.length) return
+      const newValue = isSelected ?
+         value.filter((filterChoice) => filterChoice !== choice) :
+         value ? [...value, choice] : [choice]
+      console.log(newValue)
+      onChange && onChange(newValue)
     },
-    handleChange: ({choices, setOtherValue, selected, onChange}) => value => {
-      setOtherValue(value)
-      onChange && onChange(selected.map(i=>i == choices.length ? value : choices[i]))
+    handleChange: ({value, choices, onChange}) => itemValue => {
+      const currentValue = value.find(el => choices.indexOf(el) < 0)
+      const pos = value.indexOf(currentValue)
+      const newValue = [...value]
+      newValue[pos] = itemValue
+      onChange && onChange(newValue)
     }
   })
 )(MultipleChoice)

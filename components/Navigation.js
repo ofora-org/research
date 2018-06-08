@@ -1,11 +1,23 @@
 import React from 'react'
-import { withState, compose } from 'recompose'
+import { withState, withHandlers, compose } from 'recompose'
 
 const enhance = compose(
-  withState('currentScreen', 'setScreen', 0)
+  withState('currentScreen', 'setScreen', 0),
+  withHandlers({
+    onLeftClickHandler: ({currentScreen, setScreen, onNavigate}) => () => {
+      const nextScreen = currentScreen-1
+      setScreen(nextScreen)
+      onNavigate && onNavigate(nextScreen)
+    },
+    onRightClickHandler: ({currentScreen, setScreen, onNavigate}) => () => {
+      const nextScreen = currentScreen+1
+      setScreen(nextScreen)
+      onNavigate && onNavigate(nextScreen)
+    }
+  })
 )
 
-const Navigation = ({children, currentScreen, setScreen}) =>
+const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler}) =>
   <div className='wrapper'>
     <div className='navigationBar' />
     <div className='navigationWrapper'>
@@ -13,10 +25,10 @@ const Navigation = ({children, currentScreen, setScreen}) =>
     </div>
     <div className='control'>
       {currentScreen !== 0 ?
-        <span className='left' onClick={() => setScreen(currentScreen-1)}>←</span>
+        <span className='left' onClick={onLeftClickHandler}>←</span>
       : null}
       {currentScreen !== children.length-1 ?
-        <span className='right' onClick={() => setScreen(currentScreen+1)}>→</span>
+        <span className='right' onClick={onRightClickHandler}>→</span>
       : null}
     </div>
     <style jsx>{`
@@ -58,7 +70,7 @@ const Navigation = ({children, currentScreen, setScreen}) =>
           overflow: hidden;
         }
         .control {
-          
+
         }
       }
     `}</style>

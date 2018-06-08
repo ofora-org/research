@@ -13,7 +13,7 @@ const Survey19 = (props) =>
     midpoint={0.75}
   />
 
-const LeftContent = ({onChoiceChange}) =>
+const LeftContent = ({onChoiceChange, onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Por onde você circula em São Paulo?</span></Title>
     <Subtitle>No mapa de Prefeitura Regionais de São Paulo, selecione quais regiões você frequenta em geral, mesmo que seja uma aproximação! Pode selecionar várias regiões!</Subtitle>
@@ -52,7 +52,8 @@ const LeftContent = ({onChoiceChange}) =>
         "Itaquera",
         "Aricanduva"
       ]}
-      onChange={onChoiceChange}
+      onChange={itemValue => onChange(19,itemValue)}
+      value={value}
     />
     <style jsx>{`
       .content {
@@ -75,9 +76,9 @@ const LeftContent = ({onChoiceChange}) =>
     `}</style>
   </div>
 
-const RightContent = ({selected}) =>
+const RightContent = ({value}) =>
   <div className='content'>
-    <SpRegionInput selected={selected} />
+    <SpRegionInput selected={value} />
     <style jsx>{`
       .content {
         display: flex;
@@ -90,8 +91,8 @@ const RightContent = ({selected}) =>
 export default compose(
   withState('selected', 'setSelected', []),
   withHandlers({
-    onChoiceChange: ({setSelected}) => selected => {
-      setSelected(selected)
+    onChoiceChange: ({setSelected, onChange}) => selected => {
+      onChange && onChange(19,selected)
     }
   })
 )(Survey19)
