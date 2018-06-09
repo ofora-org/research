@@ -1,5 +1,7 @@
 import React from 'react'
 import { withState, withHandlers, lifecycle, compose } from 'recompose'
+import fetch from 'isomorphic-unfetch'
+
 import Head from 'components/Head'
 import { Logo } from 'components/Icons'
 import Navigation from 'components/Navigation'
@@ -25,12 +27,13 @@ import Survey19 from 'components/survey/Survey19'
 import Survey20 from 'components/survey/Survey20'
 import Survey21 from 'components/survey/Survey21'
 
-const Index = ({onChangeHandler, value, setValue}) =>
+const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   <div className='page-wrapper'>
     <Head />
     <div className='logo'><Logo /></div>
     <div style={{pointerEvents: 'none', position: 'fixed', right: 0, zIndex: 10}}>{formatValue(value)}</div>
     <Navigation
+      onNavigate={onNavigateHandler}
       children={[
         <Survey1 />,
         <Survey2 />,
@@ -84,6 +87,24 @@ export default compose(
       const nextValue = {...value, [String(i)]: itemValue}
       setValue(nextValue)
       window.localStorage.setItem("entryValue", JSON.stringify(nextValue))
+    },
+    onNavigateHandler: ({value, setValue}) => (currentScreen, nextScreen) => {
+      if (nextScreen < 2 || nextScreen < currentScreen) return
+      const nextValue = {...value}
+      nextValue[`${nextScreen+1} start`] = value[`${nextScreen+1} start`] ?
+        value[`${nextScreen+1} start`] :
+        new Date().toISOString()
+      setValue(nextValue)
+      window.localStorage.setItem("entryValue", JSON.stringify(nextValue))
+      fetch('/api/save', {
+        body: JSON.stringify(nextValue),
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
     }
   }),
   lifecycle({

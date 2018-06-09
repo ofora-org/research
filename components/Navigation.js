@@ -7,12 +7,12 @@ const enhance = compose(
     onLeftClickHandler: ({currentScreen, setScreen, onNavigate}) => () => {
       const nextScreen = currentScreen-1
       setScreen(nextScreen)
-      onNavigate && onNavigate(nextScreen)
+      onNavigate && onNavigate(currentScreen, nextScreen)
     },
     onRightClickHandler: ({currentScreen, setScreen, onNavigate}) => () => {
       const nextScreen = currentScreen+1
       setScreen(nextScreen)
-      onNavigate && onNavigate(nextScreen)
+      onNavigate && onNavigate(currentScreen, nextScreen)
     }
   })
 )
