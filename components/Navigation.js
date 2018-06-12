@@ -17,7 +17,7 @@ const enhance = compose(
   })
 )
 
-const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler}) =>
+const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler, canNavigateRight}) =>
   <div className='wrapper'>
     <div className='navigationBar' />
     <div className='navigationWrapper'>
@@ -27,7 +27,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       {currentScreen !== 0 ?
         <span className='left' onClick={onLeftClickHandler}>←</span>
       : null}
-      {currentScreen !== children.length-1 ?
+      {(currentScreen !== children.length-1) && canNavigateRight(currentScreen) ?
         <span className='right' onClick={onRightClickHandler}>→</span>
       : null}
     </div>
