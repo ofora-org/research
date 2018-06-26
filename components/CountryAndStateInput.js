@@ -1,11 +1,11 @@
 import React from 'react'
 import { withState, withHandlers, compose } from 'recompose'
 
-const Title = ({children, value, handleChange}) =>
+const Title = ({children, value: { state, country }, onChange}) =>
   <div className='root'>
     <div>
-      <select name='country' onChange={handleChange}>
-         <option selected disabled value="País">País</option>
+      <select name='country' defaultValue="País" selected={country ? country : "País"} onChange={e => onChange({state, country: e.target.value})}>
+         <option value="País" disabled>País</option>
          <option value="Brasil">Brasil</option>
          <option value="África do Sul">África do Sul</option>
          <option value="Albânia">Albânia</option>
@@ -182,10 +182,10 @@ const Title = ({children, value, handleChange}) =>
          <option value="Zimbábue">Zimbábue</option>
       </select>
     </div>
-    {value.country === 'Brasil' ?
+    {country === 'Brasil' ?
       <div>
-        <select name='state' onChange={handleChange}>
-           <option selected="" disabled="" value="Estado">Estado</option>
+        <select name='state' defaultValue="Estado" selected={state ? state : "Estado"} onChange={e => onChange({country, state: e.target.value})}>
+           <option disabled value="Estado">Estado</option>
            <option value="AC">Acre</option>
            <option value="AL">Alagoas</option>
            <option value="AP">Amapá</option>
@@ -238,15 +238,4 @@ const Title = ({children, value, handleChange}) =>
     `}</style>
   </div>
 
-export default compose(
-  withState('value', 'setValue', {}),
-  withHandlers({
-    handleChange: ({value, setValue, onChange}) => e => {
-      const country = e.target.name === 'country' ? e.target.value : value.country
-      const state = e.target.name === 'state' ? e.target.value : value.state
-      const newValue = {country, state}
-      setValue(newValue)
-      onChange && onChange(newValue)
-    }
-  })
-)(Title)
+export default Title

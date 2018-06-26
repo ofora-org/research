@@ -40,7 +40,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey2 />,
         <Survey3 onChange={onChangeHandler} value={value['3']} />,
         <Survey4 onChange={onChangeHandler} value={value['4']} />,
-        <Survey5 onChange={onChangeHandler} value={value['5']} />,
+        <Survey5 onChange={onChangeHandler} value={value['5'] ? value['5'] : {}} />,
         <Survey6 onChange={onChangeHandler} value={value['6']} />,
         <Survey7 onChange={onChangeHandler} value={value['7']} />,
         <Survey8 onChange={onChangeHandler} value={value['8']} />,
@@ -82,7 +82,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   </div>
 
 export default compose(
-  withState('value', 'setValue', {}),
+  withState('value', 'setValue', {} ),
   withHandlers({
     onChangeHandler: ({setValue, value}) => (i, itemValue) => {
       const nextValue = {...value, [String(i)]: itemValue}
@@ -112,7 +112,7 @@ export default compose(
     componentDidMount() {
       const entryId = window.localStorage.getItem("entryId")
       const entryValue = JSON.parse(window.localStorage.getItem("entryValue"))
-      entryValue && this.props.setValue(entryValue)
+      //entryValue && this.props.setValue(entryValue)
       console.log(entryValue)
     },
   })
@@ -126,4 +126,4 @@ const formatValue = (value) =>
 const formatItemValue = (itemValue) =>
   itemValue && Array.isArray(itemValue) ?
     itemValue.map(item => <div>{item}</div>) :
-    <div>{itemValue}</div>
+    <div>{JSON.stringify(itemValue)}</div>
