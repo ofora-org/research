@@ -43,7 +43,6 @@ export default compose(
   withHandlers({
     handleClick: ({
       max,
-      choices,
       value,
       onChange
     }) => choice => {
@@ -52,7 +51,6 @@ export default compose(
       const newValue = isSelected ?
          value.filter((filterChoice) => filterChoice !== choice) :
          value ? [...value, choice] : [choice]
-      console.log(newValue)
       onChange && onChange(newValue)
     },
     handleChange: ({value, choices, onChange}) => itemValue => {

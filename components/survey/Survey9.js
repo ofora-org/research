@@ -33,7 +33,7 @@ const Content = ({value, onChange}) =>
         'Diversidade',
         'Diversão'
       ]}
-      onChange={value => onChange(9,value)}
+      onChange={newValue => onChange(9,newValue)}
       value={value}
     />
     <style jsx>{`

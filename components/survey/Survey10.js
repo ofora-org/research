@@ -20,7 +20,7 @@ const Content = ({value, onChange}) =>
         'Estudo',
         'Visito'
       ]}
-      onChange={itemValue => onChange(10,itemValue)}
+      onChange={itemValue => onChange(10,parseChoices(value, itemValue))}
       value={value}
     />
     <style jsx>{`
@@ -42,3 +42,15 @@ const Content = ({value, onChange}) =>
   </div>
 
 export default Survey10
+
+const parseChoices = (choices, newChoices) => {
+  if (!choices) return newChoices
+  const addedChoice = newChoices.filter(x => !choices.includes(x))
+  if (addedChoice.includes("Moro")) {
+    return newChoices.filter(x => x !== "Visito")
+  }
+  if (addedChoice.includes("Visito")) {
+    return newChoices.filter(x => x !== "Moro")
+  }
+  return newChoices
+}
