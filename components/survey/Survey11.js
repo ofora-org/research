@@ -15,11 +15,11 @@ const Content = ({value, onChange}) =>
     <Subtitle>Não se preocupe, não é possível ter seu endereço completo pelo CEP! Serve apenas para saber aproximadamente a área da cidade que você mora!</Subtitle>
     <div className='formGroup'>
       <label>Meu CEP é:</label>
-      <CEPInput onChange={e => onChange(11,e.target.value)} value={value} />
+      <CEPInput onChange={e => onChange(11,e.target.value)} value={value['11']} />
     </div>
     <div className='formGroup'>
       <label>Não sei ou não quero dar meu CEP, mas moro em:</label>
-      <input type='text' maxLength={60} placeholder='Nome da área/bairro' />
+      <input type='text' maxLength={60} placeholder={value['10']+'Nome da área/bairro'} />
     </div>
     <style jsx>{`
       .content {
