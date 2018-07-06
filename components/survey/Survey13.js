@@ -11,7 +11,7 @@ const Survey10 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Na sua opinião, o que você melhoraria nesse esse espaço público de convívio* perto da sua casa?</span></Title>
+    <Title><span className='title'>Na sua opinião, quais mudanças você faria no espaço público de convívio* que você acabou indicar?</span></Title>
     <Subtitle>Pode marcar várias!!</Subtitle>
     <MultipleChoice
       choices={[

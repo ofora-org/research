@@ -19,7 +19,11 @@ const Content = ({value, onChange}) =>
     </div>
     <div className='formGroup'>
       <label>Não sei ou não quero dar meu CEP, mas moro em:</label>
-      <input type='text' maxLength={60} placeholder={value['10']+'Nome da área/bairro'} />
+      <input
+        type='text'
+        maxLength={60}
+        placeholder={value['10'] && value['10'].includes('Moro') ? 'Nome da área/bairro' : 'Cidade' }
+      />
     </div>
     <style jsx>{`
       .content {

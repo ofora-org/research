@@ -47,7 +47,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey9 onChange={onChangeHandler} value={value['9']} />,
         <Survey10 onChange={onChangeHandler} value={value['10']} />,
         <Survey11 onChange={onChangeHandler} value={value} />,
-        <Survey12 onChange={onChangeHandler} value={value['12']} />,
+        <Survey12 onChange={onChangeHandler} value={value} />,
         <Survey13 onChange={onChangeHandler} value={value['13']} />,
         <Survey14 onChange={onChangeHandler} value={value['14']} />,
         <Survey15 onChange={onChangeHandler} value={value['15']} />,
