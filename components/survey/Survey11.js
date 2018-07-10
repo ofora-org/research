@@ -22,7 +22,7 @@ const Content = ({value, onChange}) =>
       <input
         type='text'
         maxLength={60}
-        placeholder={value['10'] && value['10'].includes('Moro') ? 'Nome da área/bairro' : 'Cidade' }
+        placeholder={value['10'] && value['10'].includes('Moro') ? 'Bairro/Área' : 'Cidade (UF)' }
       />
     </div>
     <style jsx>{`

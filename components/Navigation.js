@@ -27,7 +27,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       {currentScreen !== 0 ?
         <span className='left' onClick={onLeftClickHandler}>←</span>
       : null}
-      {(currentScreen !== children.length-1) && canNavigateRight(currentScreen) ?
+      {(currentScreen !== children.length-1) && canNavigateRight(children[currentScreen].key || currentScreen) ?
         <span className='right' onClick={onRightClickHandler}>→</span>
       : null}
     </div>

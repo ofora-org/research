@@ -34,29 +34,29 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
     <div style={{pointerEvents: 'none', position: 'fixed', right: 0, zIndex: 10}}>{formatValue(value)}</div>
     <Navigation
       onNavigate={onNavigateHandler}
-      canNavigateRight={i => i < 2 || value[`${i+1}`]}
+      canNavigateRight={i => i < 2 || value[`${i}`]}
       children={[
         <Survey1 />,
         <Survey2 />,
-        <Survey3 onChange={onChangeHandler} value={value['3']} />,
-        <Survey4 onChange={onChangeHandler} value={value['4']} />,
-        <Survey5 onChange={onChangeHandler} value={value['5'] ? value['5'] : {}} />,
-        <Survey6 onChange={onChangeHandler} value={value['6']} />,
-        <Survey7 onChange={onChangeHandler} value={value['7']} />,
-        <Survey8 onChange={onChangeHandler} value={value['8']} />,
-        <Survey9 onChange={onChangeHandler} value={value['9']} />,
-        <Survey10 onChange={onChangeHandler} value={value['10']} />,
-        <Survey11 onChange={onChangeHandler} value={value} />,
-        <Survey12 onChange={onChangeHandler} value={value} />,
-        <Survey13 onChange={onChangeHandler} value={value['13']} />,
-        <Survey14 onChange={onChangeHandler} value={value['14']} />,
-        <Survey15 onChange={onChangeHandler} value={value['15']} />,
-        ...(value[14] && (value[14] === '1 vez a cada 2 semanas' || value[14] === '1 vez por mês ou menos') ? [<Survey16 />] : []),
-        ...(value[10] && value[10].includes('Visito') ? [<Survey17 />] : []),
-        ...(value[10] && value[10].includes('Visito') ? [<Survey18 />] : []),
-        <Survey19 onChange={onChangeHandler} value={value['19']} />,
-        <Survey20 onChange={onChangeHandler} value={value['20']} />,
-        <Survey21 onChange={onChangeHandler} value={value['21']} />
+        <Survey3 onChange={onChangeHandler} key={3} value={value['3']} />,
+        <Survey4 onChange={onChangeHandler} key={4} value={value['4']} />,
+        <Survey5 onChange={onChangeHandler} key={5} value={value['5'] ? value['5'] : {}} />,
+        <Survey6 onChange={onChangeHandler} key={6} value={value['6']} />,
+        <Survey7 onChange={onChangeHandler} key={7} value={value['7']} />,
+        <Survey8 onChange={onChangeHandler} key={8} value={value['8']} />,
+        <Survey9 onChange={onChangeHandler} key={9} value={value['9']} />,
+        <Survey10 onChange={onChangeHandler} key={10} value={value['10']} />,
+        <Survey11 onChange={onChangeHandler} key={11} value={value} />,
+        <Survey12 onChange={onChangeHandler} key={12} value={value} />,
+        <Survey13 onChange={onChangeHandler} key={13} value={value['13']} />,
+        <Survey14 onChange={onChangeHandler} key={14} value={value['14']} />,
+        <Survey15 onChange={onChangeHandler} key={15} value={value['15']} />,
+        ...(value[14] && (value[14] === '1 vez a cada 2 semanas' || value[14] === '1 vez por mês ou menos') ? [<Survey16 onChange={onChangeHandler} key={16} value={value['16']} />] : []),
+        ...(value[10] && !value[10].includes('Moro') ? [<Survey17 onChange={onChangeHandler} key={17} value={value['17']} />] : []),
+        ...(value[10] && !value[10].includes('Moro') ? [<Survey18 onChange={onChangeHandler} key={18} value={value['18']} />] : []),
+        <Survey19 onChange={onChangeHandler} key={19} value={value['19']} />,
+        <Survey20 onChange={onChangeHandler} key={20} value={value['20']} />,
+        <Survey21 onChange={onChangeHandler} key={21} value={value['21']} />
       ]}
     />
     <style jsx>{`
