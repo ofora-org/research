@@ -34,7 +34,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
     <div style={{pointerEvents: 'none', position: 'fixed', right: 0, zIndex: 10}}>{formatValue(value)}</div>
     <Navigation
       onNavigate={onNavigateHandler}
-      canNavigateRight={i => i < 2 || value[`${i}`]}
+      canNavigateRight={i => i < 2 || ['15', '16', '18', '21'].includes(i) || value[`${i}`]}
       children={[
         <Survey1 />,
         <Survey2 />,
