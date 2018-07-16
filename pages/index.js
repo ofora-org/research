@@ -26,6 +26,13 @@ import Survey18 from 'components/survey/Survey18'
 import Survey19 from 'components/survey/Survey19'
 import Survey20 from 'components/survey/Survey20'
 import Survey21 from 'components/survey/Survey21'
+import Survey22 from 'components/survey/Survey26';
+import Survey23 from 'components/survey/Survey26';
+import Survey24 from 'components/survey/Survey24';
+import Survey25 from 'components/survey/Survey25';
+import Survey26 from 'components/survey/Survey25';
+import Survey27 from 'components/survey/Survey27';
+import Survey28 from 'components/survey/Survey27';
 
 const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   <div className='page-wrapper'>
@@ -56,7 +63,15 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         ...(value[14] && (value[14] === '1 vez a cada 2 semanas' || value[14] === '1 vez por mês ou menos') ? [<Survey16 onChange={onChangeHandler} key={16} value={value['16']} />] : []),
         <Survey19 onChange={onChangeHandler} key={19} value={value['19']} />,
         <Survey20 onChange={onChangeHandler} key={20} value={value['20']} />,
-        <Survey21 onChange={onChangeHandler} key={21} value={value['21']} />
+        <Survey21 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey22 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey23 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey24 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey25 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey26 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey27 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey28 onChange={onChangeHandler} key={21} value={value['21']} />,
+        
       ]}
     />
     <style jsx>{`
