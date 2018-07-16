@@ -64,13 +64,13 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey19 onChange={onChangeHandler} key={19} value={value['19']} />,
         <Survey20 onChange={onChangeHandler} key={20} value={value['20']} />,
         <Survey21 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey22 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey23 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey24 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey25 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey26 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey27 onChange={onChangeHandler} key={21} value={value['21']} />,
-        <Survey28 onChange={onChangeHandler} key={21} value={value['21']} />,
+        <Survey22 onChange={onChangeHandler} key={22} value={value['22']} />,
+        <Survey23 onChange={onChangeHandler} key={23} value={value['23']} />,
+        <Survey24 onChange={onChangeHandler} key={24} value={value['24']} />,
+        <Survey25 onChange={onChangeHandler} key={25} value={value['25']} />,
+        <Survey26 onChange={onChangeHandler} key={26} value={value['26']} />,
+        <Survey27 onChange={onChangeHandler} key={27} value={value['27']} />,
+        <Survey28 onChange={onChangeHandler} key={28} value={value['28']} />,
         
       ]}
     />
