@@ -2,15 +2,15 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import CEPInput from 'components/CEPInput'
-import MultipleChoice from 'components/Choice/MultipleChoice'
+import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey27 = () =>
+
+const Survey27 = props =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Avaliação da Pesquisa</span></Title>
     <Subtitle>Por favor, seja sincero e ajude a melhorar a pesquisa! Obrigada!</Subtitle>

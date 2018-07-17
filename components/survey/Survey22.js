@@ -2,15 +2,14 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import CEPInput from 'components/CEPInput'
-import MultipleChoice from 'components/Choice/MultipleChoice'
+import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey22 = () =>
+const Survey22 = props =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:</span></Title>
     <Subtitle>Sofre com racismo, machismo, homofobia e/ou outras discriminações em espaços públicos de convívio*</Subtitle>

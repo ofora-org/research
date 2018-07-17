@@ -26,13 +26,13 @@ import Survey18 from 'components/survey/Survey18'
 import Survey19 from 'components/survey/Survey19'
 import Survey20 from 'components/survey/Survey20'
 import Survey21 from 'components/survey/Survey21'
-import Survey22 from 'components/survey/Survey26';
-import Survey23 from 'components/survey/Survey26';
+import Survey22 from 'components/survey/Survey22';
+import Survey23 from 'components/survey/Survey23';
 import Survey24 from 'components/survey/Survey24';
 import Survey25 from 'components/survey/Survey25';
-import Survey26 from 'components/survey/Survey25';
+import Survey26 from 'components/survey/Survey26';
 import Survey27 from 'components/survey/Survey27';
-import Survey28 from 'components/survey/Survey27';
+import Survey28 from 'components/survey/Survey28';
 
 const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   <div className='page-wrapper'>
