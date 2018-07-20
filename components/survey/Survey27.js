@@ -14,17 +14,39 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Avaliação da Pesquisa</span></Title>
     <Subtitle>Por favor, seja sincero e ajude a melhorar a pesquisa! Obrigada!</Subtitle>
-    <br />
-    <Subtitle>Por favor, seja sincero e ajude a melhorar a pesquisa! Obrigada!</Subtitle>
+    <Subtitle>Você achou a pesquisa longa demais?</Subtitle>
     <SingleChoice
-      choices={[
-        'FREQUENTEMENTE (inclui sempre)',
-        'ÀS VEZES',
-        'RARAMENTE (inclui nunca)'
-      ]}
-      onChange={itemValue => onChange(27,itemValue)}
-      value={value}
+      choices={['Não']}
+      onChange={itemValue => onChange(27, {...value, 1: itemValue})}
+      value={value && value[1]}
+      other='Sim'
+      otherPlaceholder='Comente sobre a duração'
     />
+    <Subtitle>Você achou alguma pergunta e/ou opções de resposta estranha, invasiva e/ou descabida?</Subtitle>
+    <SingleChoice
+      choices={['Não']}
+      onChange={itemValue => onChange(27, {...value, 2: itemValue})}
+      value={value && value[2]}
+      other='Sim'
+      otherPlaceholder='Comente sobre seus incômodos'
+    />
+    <Subtitle>Você teve dificuldade para entender alguma palavra ou termo que foi usado?</Subtitle>
+    <SingleChoice
+      choices={['Não']}
+      onChange={itemValue => onChange(27, {...value, 3: itemValue})}
+      value={value && value[3]}
+      otherPlaceholder='Comente sobre a linguagem'
+      other='Sim'
+    />
+    <Subtitle>Você teve algum problema técnico ou funcional para mexer na ferramenta?</Subtitle>
+    <SingleChoice
+      choices={['Não']}
+      onChange={itemValue => onChange(27, {...value, 4: itemValue})}
+      value={value && value[4]}
+      otherPlaceholder='Comente sobre o manuseio'
+      other='Sim'
+    />
+
     <style jsx>{`
       .content {
         display: flex;

@@ -7,7 +7,8 @@ const SingleChoice = ({
   value,
   onChange,
   choices,
-  other
+  other,
+  otherPlaceholder
 }) =>
   <div className='wrapper'>
     {choices.map((choice, i) =>
@@ -24,7 +25,8 @@ const SingleChoice = ({
         label={other}
         onClick={()=>onChange('')}
         onChange={value=>onChange(value)}
-        isSelected={value && !choices.includes(value)}
+        isSelected={value !== undefined && !choices.includes(value)}
+        placeholder={otherPlaceholder}
         value={value}
       /> : null
     }

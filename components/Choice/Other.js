@@ -2,7 +2,7 @@ import React from 'react'
 import { withState, withHandlers, compose } from 'recompose'
 import Choice from './Choice'
 
-const Other = ({handleClick, onChange, isSelected, value, label}) =>
+const Other = ({handleClick, onChange, isSelected, value, label, placeholder}) =>
   <div>
     <div><div>
       <Choice onClick={handleClick} isSelected={isSelected}>
@@ -13,6 +13,7 @@ const Other = ({handleClick, onChange, isSelected, value, label}) =>
       type='text'
       value={value}
       onChange={e=>onChange(e.target.value)}
+      placeholder={placeholder}
     />
     <style jsx>{`
       div > div > div {
