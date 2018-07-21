@@ -13,7 +13,7 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
     <p>Sua contribuição foi fundamental para o Fora!</p>
-    <p>Siga para o site, Facebook ou Instagram.</p>
+    <p>Siga para o <a href="https://ofora.org/">site</a>, <a href="https://facebook.com/">Facebook</a> ou <a href="https://instagram.com/">Instagram.</a></p>
     <style jsx>{`
       .content {
         display: flex;
