@@ -6,19 +6,14 @@ import Subtitle from 'components/Subtitle'
 const Survey29 = (props) =>
   <ContentWrapper
    left={<Content {...props} />}
+   right={<Image />}
   />
 
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
-    <Subtitle>Sua contribuição foi fundamental para o Fora!</Subtitle>
-    <Subtitle>Siga para o site, Facebook ou Instagram.</Subtitle>
-    <input
-      type='text'
-      placeholder='Digite aqui a resposta.'
-      onChange={e => onChange(29,e.target.value)}
-      value={value}
-    />
+    <p>Sua contribuição foi fundamental para o Fora!</p>
+    <p>Siga para o site, Facebook ou Instagram.</p>
     <style jsx>{`
       .content {
         display: flex;
@@ -28,10 +23,27 @@ const Content = ({value, onChange}) =>
       .title {
         padding-right: 90px;
         display: block;
+        font-size: 35px;
       }
       @media only screen and (min-width: 720px) {
         .title {
           padding-right: 140px;
+          font-size: 56px;
+        }
+      }
+    `}</style>
+  </div>
+
+const Image = () =>
+  <div className='image'>
+    <style jsx>{`
+      @media only screen and (min-width: 720px) {
+        .image {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-image: url('/static/intro1.jpg');
+          background-size: cover;
+          background-position: center center;
         }
       }
     `}</style>

@@ -33,6 +33,7 @@ import Survey25 from 'components/survey/Survey25';
 import Survey26 from 'components/survey/Survey26';
 import Survey27 from 'components/survey/Survey27';
 import Survey28 from 'components/survey/Survey28';
+import Survey29 from 'components/survey/Survey29';
 
 const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   <div className='page-wrapper'>
@@ -71,7 +72,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey26 onChange={onChangeHandler} key={26} value={value['26']} />,
         <Survey27 onChange={onChangeHandler} key={27} value={value['27']} />,
         <Survey28 onChange={onChangeHandler} key={28} value={value['28']} />,
-        
+        <Survey29 onChange={onChangeHandler} key={29} value={value['29']} />
       ]}
     />
     <style jsx>{`
