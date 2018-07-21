@@ -10,7 +10,10 @@ const ContentWrapper = ({left, right, midpoint}) =>
       .content-wrapper {
         min-width: 100%;
         font-size: 21px;
+        height: 100vh;
         font-weight: 300;
+        overflow: hidden;
+        overflow-y: scroll;
       }
       .content-wrapper > div {
         flex: 1;
@@ -26,6 +29,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
       @media only screen and (min-width: 720px) {
         .content-wrapper {
           display: flex;
+          overflow: hidden;
         }
       }
     `}</style>

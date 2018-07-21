@@ -35,6 +35,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       .wrapper {
         height: 100%;
         width: 100%;
+        overflow: hidden;
       }
       .navigationBar {
         position: fixed;
@@ -50,7 +51,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         display: flex;
         height: 100%;
         transition: .6s transform;
-        transform: translateX(-${currentScreen*100}%)
+        transform: translateX(-${currentScreen*100}%);
       }
       .control {
         font-family: arial;
@@ -67,7 +68,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       }
       @media only screen and (min-width: 720px) {
         .wrapper {
-          overflow: hidden;
+
         }
         .control {
 

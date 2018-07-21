@@ -39,7 +39,6 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   <div className='page-wrapper'>
     <Head />
     <div className='logo'><Logo /></div>
-    <div style={{pointerEvents: 'none', position: 'fixed', right: 0, zIndex: 10}}>{formatValue(value)}</div>
     <Navigation
       onNavigate={onNavigateHandler}
       canNavigateRight={i => i < 2 || ['15', '16', '18', '21'].includes(i) || value[`${i}`]}
@@ -85,7 +84,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         position: fixed;
         width: 72px;
         right: 20px;
-        top: 29px;
+        top: 35px;
         z-index: 1000;
       }
       @media only screen and (min-width: 720px) {
