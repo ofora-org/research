@@ -63,6 +63,13 @@ const CustomHead = () =>
             min-height: 450px;
           }
         }
+        button {
+          border: none;
+          background: transparent;
+          font-size: inherit;
+          font-family: inherit;
+          padding: 0;
+        }
       `}
     </style>
   </div>
