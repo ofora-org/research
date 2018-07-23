@@ -59,7 +59,7 @@ const CustomHead = () =>
         }
         @media only screen and (min-width: 720px) {
           body {
-            min-width: 800px;
+            min-width: 790px;
             min-height: 450px;
           }
         }
