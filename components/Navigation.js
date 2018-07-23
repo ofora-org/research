@@ -62,6 +62,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         font-size: 80px;
         cursor: pointer;
         transition: .5s right;
+        color: #bfbfbf;
       }
       .control > span {
         padding: 0 10px

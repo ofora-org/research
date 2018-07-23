@@ -17,7 +17,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
       }
       .content-wrapper > div {
         flex: 1;
-        padding: 20px;
+        padding: 40px;
         padding-top: 35px;
         position: relative;
       }
