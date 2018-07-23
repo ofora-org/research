@@ -14,7 +14,7 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Avaliação da Pesquisa</span></Title>
     <Subtitle>Por favor, seja sincero e ajude a melhorar a pesquisa! Obrigada!</Subtitle>
-    <Subtitle>Você achou a pesquisa longa demais?</Subtitle>
+    <p>Você achou a pesquisa longa demais?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 1: itemValue})}
@@ -22,7 +22,7 @@ const Content = ({value, onChange}) =>
       other='Sim'
       otherPlaceholder='Comente sobre a duração'
     />
-    <Subtitle>Você achou alguma pergunta e/ou opções de resposta estranha, invasiva e/ou descabida?</Subtitle>
+    <p>Você achou alguma pergunta e/ou opções de resposta estranha, invasiva e/ou descabida?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 2: itemValue})}
@@ -30,7 +30,7 @@ const Content = ({value, onChange}) =>
       other='Sim'
       otherPlaceholder='Comente sobre seus incômodos'
     />
-    <Subtitle>Você teve dificuldade para entender alguma palavra ou termo que foi usado?</Subtitle>
+    <p>Você teve dificuldade para entender alguma palavra ou termo que foi usado?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 3: itemValue})}
@@ -38,7 +38,7 @@ const Content = ({value, onChange}) =>
       otherPlaceholder='Comente sobre a linguagem'
       other='Sim'
     />
-    <Subtitle>Você teve algum problema técnico ou funcional para mexer na ferramenta?</Subtitle>
+    <p>Você teve algum problema técnico ou funcional para mexer na ferramenta?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 4: itemValue})}
@@ -52,6 +52,7 @@ const Content = ({value, onChange}) =>
         display: flex;
         flex-direction: column;
         max-height: 100%;
+        width: 60%;
       }
       .title {
         padding-right: 90px;

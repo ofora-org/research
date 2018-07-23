@@ -75,6 +75,7 @@ const CustomHead = () =>
           font-size: 1.3em;
           border: none;
           font-weight: bold;
+          max-width: 970px;
         }
       `}
     </style>

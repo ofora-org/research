@@ -17,7 +17,7 @@ const Content = ({value, onChange}) =>
       placeholder='Digite aqui a resposta.'
       onChange={e => onChange(12,e.target.value)}
       value={value['12']}
-      row="6"
+      rows="6"
     />
     <style jsx>{`
       .content {
