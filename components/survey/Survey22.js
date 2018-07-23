@@ -12,7 +12,7 @@ const Survey22 = props =>
 const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:</span></Title>
-    <Subtitle>Sofre com racismo, machismo, homofobia e/ou outras discriminações em espaços públicos de convívio*</Subtitle>
+    <p>Sofre com racismo, machismo, homofobia e/ou outras discriminações em espaços públicos de convívio*</p>
     <SingleChoice
       choices={[
         'FREQUENTEMENTE (inclui sempre)',

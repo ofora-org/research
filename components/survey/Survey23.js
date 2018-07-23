@@ -12,7 +12,7 @@ const Survey23 = props =>
 const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:</span></Title>
-    <Subtitle>Se sente inseguro ou em perigo nos espaços públicos de convívio*</Subtitle>
+    <p>Se sente inseguro ou em perigo nos espaços públicos de convívio*</p>
     <SingleChoice
       choices={[
         'FREQUENTEMENTE (inclui sempre)',
