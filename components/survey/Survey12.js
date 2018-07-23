@@ -12,7 +12,13 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Qual é o espaço público de convívio* que você {value['10'] && value[10].includes('Moro') ? 'frequenta mais perto da sua casa?' : 'mais frequenta quando está em São Paulo?'}</span></Title>
     <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
-    <input type='text' placeholder='Digite aqui a resposta.' onChange={e => onChange(12,e.target.value)} value={value['12']} />
+    <textarea
+      type='text' 
+      placeholder='Digite aqui a resposta.'
+      onChange={e => onChange(12,e.target.value)}
+      value={value['12']}
+      row="6"
+    />
     <style jsx>{`
       .content {
         display: flex;
