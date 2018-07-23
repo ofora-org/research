@@ -12,6 +12,7 @@ const Content = () =>
   <div className='content'>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
     <p>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</p>
+    <p><a href="https://ofora.org/o-que-e">Saiba mais</a></p>
     <style jsx>{`
       .title {
         font-size: 35px;

@@ -37,7 +37,7 @@ const CustomHead = () =>
           cursor: pointer;
         }
         a:visited { color: inherit; }
-        a:focus, input:focus { outline: none; }
+        a:focus, input:focus, textarea:focus { outline: none; }
         input {
           font-size: inherit;
           font-weight: 600;
@@ -69,6 +69,11 @@ const CustomHead = () =>
           font-size: inherit;
           font-family: inherit;
           padding: 0;
+        }
+        textarea {
+          background: none;
+          font-size: 1.5em;
+          border: none;
         }
       `}
     </style>

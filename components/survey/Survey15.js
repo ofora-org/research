@@ -12,11 +12,12 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>O que você costuma fazer quando sai para curtir* em São Paulo?</span></Title>
     <Subtitle>Pode usar só palavras-chave, é rápido!</Subtitle>
-    <input
+    <textarea
       type='text'
       placeholder='Digite aqui a resposta.'
       onChange={e => onChange(15,e.target.value)}
       value={value}
+      rows="6"
     />
     <style jsx>{`
       .content {

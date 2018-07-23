@@ -8,6 +8,7 @@ const Title = ({children}) =>
         font-size: 27px;
         line-height: 1.2em;
         font-weight: 900;
+        max-width: 980px;
       }
       @media only screen and (min-width: 799px) {
         div {
