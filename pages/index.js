@@ -82,14 +82,20 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
       }
       .logo {
         position: fixed;
-        width: 72px;
+        width: 70px;
         right: 20px;
-        top: 35px;
+        top: 36px;
         z-index: 1000;
       }
-      @media only screen and (min-width: 720px) {
+      @media only screen and (min-width: 799px) {
         .logo {
-          top: 45px;
+          top: 38px;
+          width: 90px;
+        }
+      }
+      @media only screen and (min-width: 960px) {
+        .logo {
+          right: 40px;
           width: 114px;
         }
       }

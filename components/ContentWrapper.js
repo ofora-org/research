@@ -9,7 +9,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
     <style jsx>{`
       .content-wrapper {
         min-width: 100%;
-        font-size: 21px;
+        font-size: 18px;
         height: 100vh;
         font-weight: 300;
         overflow: hidden;
@@ -17,7 +17,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
       }
       .content-wrapper > div {
         flex: 1;
-        padding: 40px;
+        padding: 20px;
         padding-top: 35px;
         position: relative;
       }
@@ -30,6 +30,12 @@ const ContentWrapper = ({left, right, midpoint}) =>
         .content-wrapper {
           display: flex;
           overflow: hidden;
+        }
+      }
+      @media only screen and (min-width: 960px) {
+        .content-wrapper > div {
+          padding: 40px;
+          font-size: 21px;
         }
       }
     `}</style>

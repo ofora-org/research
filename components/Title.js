@@ -10,6 +10,11 @@ const Title = ({children}) =>
       }
       @media only screen and (min-width: 720px) {
         div {
+          font-size: 36px;
+        }
+      }
+      @media only screen and (min-width: 960px) {
+        div {
           font-size: 43px;
         }
       }
