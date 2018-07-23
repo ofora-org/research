@@ -22,7 +22,7 @@ const Other = ({handleClick, onChange, isSelected, value, label, placeholder}) =
       input {
         padding: 10px;
         opacity: ${isSelected ? '1' : '0'};
-        margin: 5px 30px;
+        margin: 5px;
         transition: .2s opacity .1s;
       }
     `}</style>
