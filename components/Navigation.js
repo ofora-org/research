@@ -1,5 +1,11 @@
 import React from 'react'
-import { withState, withHandlers, compose } from 'recompose'
+import { withState, withHandlers, compose, withProps } from 'recompose'
+
+const getScreenColor = screen => {
+  if (screen < 4) return '#FF001D'
+  if (screen < 9) return '#FF7401'
+  return '#0009FF'
+}
 
 const enhance = compose(
   withState('currentScreen', 'setScreen', 0),
@@ -14,10 +20,16 @@ const enhance = compose(
       setScreen(nextScreen)
       onNavigate && onNavigate(currentScreen, nextScreen)
     }
-  })
+  }),
+  withProps(
+    ({canNavigateRight, currentScreen, children}) => ({
+      canNavigateRight: canNavigateRight(children[currentScreen].key || currentScreen),
+      color: getScreenColor(children[currentScreen].key || currentScreen)
+    })
+  )
 )
 
-const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler, canNavigateRight}) =>
+const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler, canNavigateRight, color}) =>
   <div className='wrapper'>
     <div className='navigationBar' />
     <div className='navigationWrapper'>
@@ -27,10 +39,15 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       {currentScreen !== 0 ?
         <span className='left' onClick={onLeftClickHandler}>←</span>
       : null}
-      {(currentScreen !== children.length-1) && canNavigateRight(children[currentScreen].key || currentScreen) ?
+      {(currentScreen !== children.length-1) ?
         <span className='right' onClick={onRightClickHandler}>→</span>
       : null}
     </div>
+    <style jsx global>{`
+      .choice-item.selected {
+        background: red; //${color};
+      }
+    `}</style>
     <style jsx>{`
       .wrapper {
         height: 100%;
@@ -42,10 +59,10 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         left: 0;
         top: 0;
         height: 15px;
-        background: red;
+        background: red;//${color};
         width: ${(currentScreen+1)/children.length*100}%;
         z-index: 900;
-        transition: 1.3s width 0.1s;
+        //transition: 1.3s width 0.1s, 1.5s background;
       }
       .navigationWrapper {
         display: flex;
@@ -60,12 +77,20 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         transform: translateX(${currentScreen === 0 ? '50%' : '0'});
         bottom: 20px;
         font-size: 80px;
-        cursor: pointer;
-        transition: .5s right;
+        transition: .5s right .2s;
         color: #bfbfbf;
       }
+      .control .right {
+        color: ${canNavigateRight && 'red'};
+        pointer-events: ${!canNavigateRight && 'none'};
+        cursor: ${!canNavigateRight && 'auto'}
+      }
+      .control .left:hover {
+        color: black;
+      }
       .control > span {
-        padding: 0 10px
+        padding: 0 10px;
+        cursor: pointer;
       }
       @media only screen and (min-width: 720px) {
         .wrapper {

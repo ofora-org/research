@@ -1,10 +1,10 @@
 const Choice = ({children, onClick, isSelected}) =>
-  <div onClick={onClick}>
+  <div onClick={onClick} className={`choice-item ${isSelected && 'selected'}`}>
     {children}
     <style jsx>{`
       div {
         padding: 0.4em 0.6em;
-        background: ${isSelected ? 'red' : '#bfbfbf' };
+        background: #bfbfbf;
         cursor: pointer;
         color: white;
         font-weight: 600;
