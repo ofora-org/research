@@ -36,6 +36,11 @@ const MultipleChoice = ({
         flex-flow: column wrap;
         align-items: flex-start;
       }
+      @media only screen and (min-width: 960px) {
+        div {
+          padding: 0 1.5em
+        }
+      }
     `}</style>
   </div>
 
