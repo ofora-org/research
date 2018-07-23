@@ -72,7 +72,7 @@ const CustomHead = () =>
         }
         textarea {
           background: none;
-          font-size: 1.5em;
+          font-size: 1.3em;
           border: none;
           font-weight: bold;
         }

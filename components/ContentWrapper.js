@@ -9,7 +9,6 @@ const ContentWrapper = ({left, right, midpoint}) =>
     <style jsx>{`
       .content-wrapper {
         min-width: 100%;
-        font-size: 18px;
         height: 100vh;
         font-weight: 300;
         overflow: hidden;
@@ -20,6 +19,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
         padding: 20px;
         padding-top: 35px;
         position: relative;
+        font-size: 18px;
       }
       .content-wrapper > div:first-child {
         min-height: 50vh;
