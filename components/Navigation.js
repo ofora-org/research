@@ -45,7 +45,12 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
     </div>
     <style jsx global>{`
       .choice-item.selected {
-        background: red; //${color};
+        background: ${color};
+      }
+      @media only screen and (min-width: 720px) {
+        .choice-item:hover {
+          background: ${color};
+        }
       }
     `}</style>
     <style jsx>{`
@@ -59,7 +64,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         left: 0;
         top: 0;
         height: 15px;
-        background: red;//${color};
+        background: ${color};
         width: ${(currentScreen+1)/children.length*100}%;
         z-index: 900;
         //transition: 1.3s width 0.1s, 1.5s background;
@@ -81,7 +86,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         color: #bfbfbf;
       }
       .control .right {
-        color: ${canNavigateRight && 'red'};
+        color: ${canNavigateRight && color};
         pointer-events: ${!canNavigateRight && 'none'};
         cursor: ${!canNavigateRight && 'auto'}
       }
