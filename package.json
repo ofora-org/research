@@ -17,6 +17,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-input-mask": "^2.0.1",
+    "react-swipeable": "^4.3.0",
     "recompose": "^0.26.0"
   },
   "devDependencies": {

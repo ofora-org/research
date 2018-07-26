@@ -1,5 +1,6 @@
 import React from 'react'
 import { withState, withHandlers, compose, withProps, lifecycle } from 'recompose'
+import Swipeable from 'react-swipeable'
 
 const getScreenColor = screen => {
   if (screen < 4) return '#FF001D'
@@ -42,6 +43,10 @@ const enhance = compose(
 )
 
 const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler, canNavigateRight, color}) =>
+<Swipeable
+  onSwipedLeft={canNavigateRight && onRightClickHandler}
+  onSwipedRight={currentScreen !== 0 && onLeftClickHandler}
+>
   <div className='wrapper'>
     <div className='navigationBar' />
     <div className='navigationWrapper'>
@@ -58,6 +63,9 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
     <style jsx global>{`
       .choice-item.selected {
         background: ${color};
+      }
+      .navigation-color {
+        color: ${color}
       }
       @media only screen and (min-width: 720px) {
         .choice-item:hover {
@@ -119,5 +127,6 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       }
     `}</style>
   </div>
+</Swipeable>
 
 export default enhance(Navigation)

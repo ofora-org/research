@@ -12,6 +12,7 @@ const CustomHead = () =>
       <meta property='og:title' content='Pesquisa Fora' />
       <meta property='og:image' content='' />
       <meta property='og:description' content='Descrição para Pesquisa Fora' />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable='no' />
     </Head>
       <style jsx global>{`
         html, body, #__next {
