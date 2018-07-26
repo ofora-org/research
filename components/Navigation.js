@@ -1,5 +1,5 @@
 import React from 'react'
-import { withState, withHandlers, compose, withProps } from 'recompose'
+import { withState, withHandlers, compose, withProps, lifecycle } from 'recompose'
 
 const getScreenColor = screen => {
   if (screen < 4) return '#FF001D'
@@ -26,7 +26,19 @@ const enhance = compose(
       canNavigateRight: canNavigateRight(children[currentScreen].key || currentScreen),
       color: getScreenColor(children[currentScreen].key || currentScreen)
     })
-  )
+  ),
+  lifecycle({
+    componentDidMount() {
+      this.handleKeyDown = e => {
+        e.keyCode === 37 && this.props.onLeftClickHandler()
+        e.keyCode === 39 && this.props.canNavigateRight && this.props.onRightClickHandler()
+      }
+      document.addEventListener('keydown', this.handleKeyDown)
+    },
+    componentWillUnmount() {
+      document.removeEventListener('keydown', this.handleKeyDown)
+    }
+  })
 )
 
 const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHandler, canNavigateRight, color}) =>
@@ -67,7 +79,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         background: ${color};
         width: ${(currentScreen+1)/children.length*100}%;
         z-index: 900;
-        //transition: 1.3s width 0.1s, 1.5s background;
+        transition: 1.3s width 0.1s, 1.5s background;
       }
       .navigationWrapper {
         display: flex;
