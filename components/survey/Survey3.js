@@ -3,6 +3,7 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import SingleChoice from 'components/Choice/SingleChoice'
+import AsteriscNote from '../AsteriscNote';
 
 const Survey1 = (props) =>
   <ContentWrapper
@@ -18,6 +19,7 @@ const Content = ({onChange, value}) =>
       onChange={itemValue => onChange(3,itemValue)}
       value={value}
     />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;

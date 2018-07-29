@@ -2,6 +2,7 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
+import AsteriscNote from 'components/AsteriscNote'
 
 const Survey15 = (props) =>
   <ContentWrapper
@@ -19,6 +20,8 @@ const Content = ({value, onChange}) =>
       value={value}
       rows="6"
     />
+    <AsteriscNote>* Tempo livre, atividades sociais, culturais, esportivas, lazer, etc.</AsteriscNote>
+
     <style jsx>{`
       .content {
         display: flex;
