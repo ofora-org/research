@@ -38,7 +38,7 @@ import Survey29 from 'components/survey/Survey29';
 const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
   <div className='page-wrapper'>
     <Head />
-    <div className='logo'><Logo /></div>
+    <div className='logo logo-color'><Logo /></div>
     <Navigation
       onNavigate={onNavigateHandler}
       canNavigateRight={i => i < 2 || ['15', '16', '18', '21'].includes(i) || value[`${i}`]}

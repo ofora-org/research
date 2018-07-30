@@ -8,6 +8,13 @@ const getScreenColor = screen => {
   return '#0009FF'
 }
 
+const getLogoColor = screen => {
+  if ([0,5,9,13].includes(screen)) return 'transparent'
+  if ([1].includes(screen)) return '#FF001D'
+  if ([27].includes(screen)) return 'pink'
+  return 'white'
+}
+
 const enhance = compose(
   withState('currentScreen', 'setScreen', 0),
   withHandlers({
@@ -74,6 +81,9 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         .choice-item:hover {
           background: ${color};
         }
+      }
+      .logo-color {
+        fill: ${getLogoColor(currentScreen)}
       }
     `}</style>
     <style jsx>{`
