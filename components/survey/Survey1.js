@@ -9,13 +9,16 @@ const Survey1 = () =>
   />
 
 const Content = () =>
-  <div className='content'>
+  <div className='content navigation-color '>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
     <p>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</p>
     <p><a href="https://ofora.org/o-que-e">Saiba mais</a></p>
     <style jsx>{`
       .title {
         font-size: 35px;
+      }
+      a {
+        box-shadow: 0px -4px 0px 0px white inset;
       }
       @media only screen and (min-width: 720px) {
         .title {
