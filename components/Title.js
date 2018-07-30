@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Title = ({children}) =>
-  <div>
+  <div className="navigation-color">
     {children}
     <style jsx>{`
       div {

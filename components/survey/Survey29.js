@@ -41,7 +41,7 @@ const Image = () =>
         .image {
           position: absolute;
           top: 0; left: 0; right: 0; bottom: 0;
-          background-image: url('/static/intro1.jpg');
+          background-image: url('/static/end1.jpg');
           background-size: cover;
           background-position: center center;
         }

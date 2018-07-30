@@ -6,7 +6,8 @@ import AsteriscNote from 'components/AsteriscNote'
 
 const Survey12 = (props) =>
   <ContentWrapper
-   left={<Content {...props} />}
+    left={<Content {...props} />}
+    right={<Image />}
   />
 
 const Content = ({value, onChange}) =>
@@ -34,6 +35,21 @@ const Content = ({value, onChange}) =>
       @media only screen and (min-width: 720px) {
         .title {
           padding-right: 140px;
+        }
+      }
+    `}</style>
+  </div>
+
+const Image = () =>
+  <div className='image'>
+    <style jsx>{`
+      @media only screen and (min-width: 720px) {
+        .image {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-image: url('/static/image5.jpg');
+          background-size: cover;
+          background-position: center center;
         }
       }
     `}</style>

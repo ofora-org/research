@@ -7,6 +7,7 @@ import MultipleChoice from 'components/Choice/MultipleChoice'
 const Survey10 = (props) =>
   <ContentWrapper
     left={<Content {...props} />}
+    right={<Image />}
   />
 
 const Content = ({value, onChange}) =>
@@ -40,6 +41,22 @@ const Content = ({value, onChange}) =>
       }
     `}</style>
   </div>
+
+const Image = () =>
+<div className='image'>
+  <style jsx>{`
+    @media only screen and (min-width: 720px) {
+      .image {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: url('/static/image2.jpg');
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+  `}</style>
+</div>
+
 
 export default Survey10
 
