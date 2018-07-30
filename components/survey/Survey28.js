@@ -16,7 +16,7 @@ const Content = ({value, onChange}) =>
     <Subtitle>Resuma no campo abaixo!</Subtitle>
     <input
       type='text'
-      placeholder='Digite aqui a resposta.'
+      placeholder='Digite aqui sua resposta'
       onChange={e => onChange(28,e.target.value)}
       value={value}
     />

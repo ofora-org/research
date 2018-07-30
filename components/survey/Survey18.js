@@ -14,7 +14,7 @@ const Content = ({value, onChange}) =>
     <Subtitle>Pode usar só palavras-chave, é rápido!</Subtitle>
     <textarea
       type='text'
-      placeholder='Digite aqui a resposta.'
+      placeholder='Digite aqui sua resposta'
       onChange={e => onChange(18,e.target.value)}
       value={value}
       rows="6"

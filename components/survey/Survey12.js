@@ -15,7 +15,7 @@ const Content = ({value, onChange}) =>
     <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
     <textarea
       type='text' 
-      placeholder='Digite aqui a resposta.'
+      placeholder='Digite aqui sua resposta'
       onChange={e => onChange(12,e.target.value)}
       value={value['12']}
       rows="6"

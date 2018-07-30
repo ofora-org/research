@@ -16,15 +16,15 @@ const Content = () =>
     <Subtitle>Se não souber ou tiver nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
     <div className='formGroup'>
       <label><span>#1</span> Favorito</label>
-      <input type='text' placeholder='Digite Aqui' />
+      <input type='text' placeholder='Digite aqui sua resposta' />
     </div>
     <div className='formGroup'>
       <label><span>#2</span> Favorito</label>
-      <input type='text' placeholder='Digite Aqui' />
+      <input type='text' placeholder='Digite aqui sua resposta' />
     </div>
     <div className='formGroup'>
       <label><span>#3</span> Favorito</label>
-      <input type='text' placeholder='Digite Aqui' />
+      <input type='text' placeholder='Digite aqui sua resposta' />
     </div>
     <style jsx>{`
       .content {

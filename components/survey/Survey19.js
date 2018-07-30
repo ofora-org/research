@@ -99,7 +99,7 @@ const RightContent = ({value}) =>
 export default compose(
   withState('selected', 'setSelected', []),
   withHandlers({
-    onChoiceChange: ({setSelected, onChange}) => selected => {
+    onChoiceChange: ({onChange}) => selected => {
       onChange && onChange(19,selected)
     }
   })
