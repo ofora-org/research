@@ -64,9 +64,12 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       .choice-item.selected {
         background: ${color};
       }
+      input,
+      textarea,
       .navigation-color {
         color: ${color}
       }
+      
       @media only screen and (min-width: 720px) {
         .choice-item:hover {
           background: ${color};

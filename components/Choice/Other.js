@@ -20,7 +20,7 @@ const Other = ({handleClick, onChange, isSelected, value, label, placeholder}) =
         display: inline-block;
       }
       input {
-        padding: 10px;
+        padding: 8px 11px;
         opacity: ${isSelected ? '1' : '0'};
         margin: 5px;
         transition: .2s opacity .1s;

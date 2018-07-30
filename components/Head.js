@@ -47,6 +47,7 @@ const CustomHead = () =>
           background: none;
           border: none;
           margin: 0;
+          font-size: 1.3em;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: white;
@@ -73,11 +74,11 @@ const CustomHead = () =>
         }
         textarea {
           background: none;
-          font-size: 1.3em;
           border: none;
           font-weight: bold;
           max-width: 970px;
           resize: none;
+          font-size: 1.3em;
         }
       `}
     </style>
