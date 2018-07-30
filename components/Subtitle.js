@@ -11,13 +11,12 @@ const Subtitle = ({children}) =>
       }
       @media only screen and (min-width: 720px) {
         p {
-          font-size: 13px;
+          font-size: 16px;
           padding-left: 3px;
         }
       }
       @media only screen and (min-width: 960px) {
         p {
-          font-size: 16px;
           padding-left: 3px;
         }
       }
