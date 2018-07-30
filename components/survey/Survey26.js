@@ -12,13 +12,14 @@ const Survey26 = props =>
 
 const Content = ({onChange, value}) =>
   <div className='content'>
-    <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:</span></Title>
-    <p>Realiza ou gostaria de realizar atividades culturais, sociais e/ou econômicas em espaços públicos de convívio*</p>
+    <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:<br />
+    Realiza ou gostaria de realizar atividades culturais, sociais e/ou econômicas em espaços públicos de convívio*
+    </span></Title><br />
     <SingleChoice
       choices={[
-        'FREQUENTEMENTE (inclui sempre)',
-        'ÀS VEZES',
-        'RARAMENTE (inclui nunca)'
+        'Frequentemente (inclui sempre)',
+        'Às vezes',
+        'Raramente (inclui nunca)'
       ]}
       onChange={itemValue => onChange(26,itemValue)}
       value={value}

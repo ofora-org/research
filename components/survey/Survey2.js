@@ -29,6 +29,9 @@ const Content = () =>
         height: 100%;
         color: white;
       }
+      .title {
+        color: white;
+      }
       @media only screen and (max-width: 720px) {
         .title {
           padding-right: 72px;

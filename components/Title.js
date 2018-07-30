@@ -9,6 +9,7 @@ const Title = ({children}) =>
         line-height: 1.2em;
         font-weight: 900;
         max-width: 980px;
+        transition: .5s color;
       }
       @media only screen and (min-width: 799px) {
         div {

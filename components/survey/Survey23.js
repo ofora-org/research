@@ -17,9 +17,9 @@ const Content = ({onChange, value}) =>
     <br />
     <SingleChoice
       choices={[
-        'FREQUENTEMENTE (inclui sempre)',
-        'ÀS VEZES',
-        'RARAMENTE (inclui nunca)'
+        'Frequentemente (inclui sempre)',
+        'Às vezes',
+        'Raramente (inclui nunca)'
       ]}
       onChange={itemValue => onChange(23,itemValue)}
       value={value}

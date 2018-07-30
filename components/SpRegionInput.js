@@ -218,7 +218,7 @@ className={selected && selected.indexOf("Cidade Tiradentes") !== -1 && 'selected
         //fill: #888;
       }
       svg path.selected {
-        fill: red;
+        fill: #0009FF;
       }
     `}</style>
   </div>

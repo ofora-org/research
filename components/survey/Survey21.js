@@ -15,15 +15,15 @@ const Content = () =>
     <Title><span className='title'>Quais são seus espaços públicos de convívio* favoritos de São Paulo?</span></Title>
     <Subtitle>Se não souber ou tiver nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
     <div className='formGroup'>
-      <label><span>#1</span> Favorito:</label>
+      <label><span>#1</span> Favorito</label>
       <input type='text' placeholder='Digite Aqui' />
     </div>
     <div className='formGroup'>
-      <label><span>#2</span> Favorito:</label>
+      <label><span>#2</span> Favorito</label>
       <input type='text' placeholder='Digite Aqui' />
     </div>
     <div className='formGroup'>
-      <label><span>#3</span> Favorito:</label>
+      <label><span>#3</span> Favorito</label>
       <input type='text' placeholder='Digite Aqui' />
     </div>
     <style jsx>{`
@@ -43,6 +43,7 @@ const Content = () =>
         display: block;
         font-weight: bold;
         font-size: 1.8em;
+        color: #0009FF;
       }
       label span {
         -webkit-text-stroke: 1px blue;
