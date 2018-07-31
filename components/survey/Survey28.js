@@ -46,7 +46,7 @@ const Image = () =>
           top: 0; left: 0; right: 0; bottom: 0;
           background-image: url('/static/image6.jpg');
           background-size: cover;
-          background-position: center center;
+          background-position: bottom center;
         }
       }
     `}</style>

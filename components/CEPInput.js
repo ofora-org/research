@@ -7,14 +7,14 @@ const CEPInput = props =>
   <div className='root'>
     <div>
       <div><InputMask {...props} mask="99999-999" maskChar="" placeholder='00000-000' /></div>
-      <a onClick={props.handleSearchCepShow} target='_blank'>Não sei meu CEP</a>
+      <a onClick={props.handleSearchCepShow} target='_blank'>Buscar CEP</a>
     </div>
     {props.isSearchCepVisible &&
       <div className='search-cep'>
         <div className='search-cep' onClick={props.handleSearchCepShow} />
         <div className='inner'>
-          <h3>Digite a baixo bla bla bla...</h3>
-          <input type='text' placeholder='Estado (UF)' size={9} maxLength={2} className='uf' />
+          <h3>Insira a baixo</h3>
+          <input type='text' placeholder='UF' size={5} maxLength={2} className='uf' />
           <input type='text' placeholder='Cidade' size={9} className='city' />
           <input type='text' placeholder='Rua' className='street' />
           <div><button onClick={props.handleSearchCepSubmit}>Buscar</button></div>
