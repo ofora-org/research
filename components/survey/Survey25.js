@@ -3,6 +3,7 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import SingleChoice from 'components/Choice/SingleChoice'
+import AsteriscNote from '../AsteriscNote';
 
 const Survey25 = props =>
   <ContentWrapper
@@ -14,9 +15,10 @@ const Content = ({onChange, value}) =>
     <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:<br />
     Passa por repressões de autoridades policiais em espaços públicos de convívio*
     </span></Title><br />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[
-        'Frequentemente (inclui sempre)',
+        'Frequentemente (ou sempre)',
         'Às vezes',
         'Raramente (ou nunca)'
       ]}
