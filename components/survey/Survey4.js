@@ -12,9 +12,10 @@ const Survey4 = (props) =>
 const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Na sua opinião, quem deve participar das decisões sobre os espaços públicos de convívio* da cidade?</span></Title>
-    <Subtitle>Pode selecionar várias opções!</Subtitle>
+    <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       other='Outros, quem?'
+      otherPlaceholder='Digite aqui sua resposta'
       choices={[
         'Prefeitura',
         'Vereadores',

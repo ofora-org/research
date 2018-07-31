@@ -19,7 +19,7 @@ const Content = ({onChange, value}) =>
       choices={[
         'Frequentemente (inclui sempre)',
         'Às vezes',
-        'Raramente (inclui nunca)'
+        'Raramente (ou nunca)'
       ]}
       onChange={itemValue => onChange(24,itemValue)}
       value={value}

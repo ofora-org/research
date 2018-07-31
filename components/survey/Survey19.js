@@ -16,7 +16,7 @@ const Survey19 = (props) =>
 const LeftContent = ({onChoiceChange, onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Por onde você circula em São Paulo?</span></Title>
-    <Subtitle>No mapa de Prefeitura Regionais de São Paulo, selecione quais regiões você frequenta em geral, mesmo que seja uma aproximação! Pode selecionar várias regiões!</Subtitle>
+    <Subtitle>No mapa de Prefeitura Regionais de São Paulo, selecione quais regiões você frequenta em geral, mesmo que seja uma aproximação! Pode selecionar várias regiões:</Subtitle>
     <MultipleChoice
       choices={[
         "Parelheiros",

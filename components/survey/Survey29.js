@@ -11,19 +11,28 @@ const Survey29 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
+    <div className='background' />
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
     <p>Sua contribuição foi fundamental para o Fora!</p>
     <p>Siga para o <a href="https://ofora.org/">site</a>, <a href="https://facebook.com/">Facebook</a> ou <a href="https://instagram.com/">Instagram.</a></p>
     <style jsx>{`
+      .background {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background: #dc0596;
+        z-index: -1;
+      }
       .content {
         display: flex;
         flex-direction: column;
         max-height: 100%;
+        color: white;
       }
       .title {
         padding-right: 90px;
         display: block;
         font-size: 35px;
+        color: white;
       }
       @media only screen and (min-width: 720px) {
         .title {

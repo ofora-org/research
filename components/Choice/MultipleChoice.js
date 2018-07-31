@@ -9,6 +9,7 @@ const MultipleChoice = ({
   handleClick,
   handleChange,
   value,
+  otherPlaceholder,
   ...props
 }) =>
   <div className='wrapper'>
@@ -28,6 +29,7 @@ const MultipleChoice = ({
         onChange={handleChange}
         isSelected={value && typeof value.find(el => choices.indexOf(el) < 0) === 'string'}
         value={value && value.find(el => choices.indexOf(el) < 0)}
+        placeholder={otherPlaceholder}
       /> : null
     }
     <style jsx>{`

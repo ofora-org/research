@@ -13,7 +13,7 @@ const Survey1 = (props) =>
 const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Qual a importância dos espaços públicos de convívio* para sua vida na cidade?</span></Title>
-    <Subtitle>Indique o grau na escala!</Subtitle>
+    <Subtitle>Indique o grau na escala:</Subtitle>
     <SingleChoice
       choices={['Toda', 'Muita', 'Média', 'Pouca', 'Nenhuma']}
       onChange={itemValue => onChange(3,itemValue)}

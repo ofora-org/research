@@ -12,7 +12,7 @@ const Survey4 = (props) =>
   const Content = ({value, value: { location, age }, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Em que ano você nasceu?</span></Title>
-    <Subtitle>Digite abaixo!</Subtitle>
+    <Subtitle>Digite abaixo:</Subtitle>
     <input type='text' maxLength={4} placeholder='0000' value={age} onKeyPress={handleKeyPress} onChange={e => onChange(5, {...value, age: e.target.value})} />
     <Title><span>Onde você nasceu?</span></Title>
     <Subtitle>Selecione uma opção da lista!</Subtitle>

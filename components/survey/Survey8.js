@@ -12,7 +12,7 @@ const Survey8 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Quais canais de comunicação você costuma utilizar?</span></Title>
-    <Subtitle>Pode selecionar várias opções!</Subtitle>
+    <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       other='Outros:'
       choices={[
