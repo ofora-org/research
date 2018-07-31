@@ -9,9 +9,9 @@ const getScreenColor = screen => {
 }
 
 const getLogoColor = screen => {
-  if ([0,5,9,13,26].includes(screen)) return 'transparent'
-  if ([1].includes(screen)) return '#FF001D'
-  if ([27].includes(screen)) return '#dc0596'
+  if ([1,6,12,15,16,28].includes(screen)) return 'transparent'
+  if ([2].includes(screen)) return '#FF001D'
+  if ([29].includes(screen)) return '#dc0596'
   return 'white'
 }
 
@@ -83,7 +83,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         }
       }
       .logo-color {
-        fill: ${getLogoColor(currentScreen)}
+        fill: ${getLogoColor(parseInt(children[currentScreen].key))}
       }
     `}</style>
     <style jsx>{`

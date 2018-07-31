@@ -6,7 +6,7 @@ const Title = ({children}) =>
     <style jsx>{`
       div {
         font-size: 27px;
-        line-height: 1.333em;
+        line-height: 1.5em;
         font-weight: 900;
         max-width: 980px;
         transition: .5s color;

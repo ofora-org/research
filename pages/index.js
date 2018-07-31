@@ -41,10 +41,10 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
     <div className='logo logo-color'><Logo /></div>
     <Navigation
       onNavigate={onNavigateHandler}
-      canNavigateRight={i => i < 2 || ['15', '16', '18', '21'].includes(i) || value[`${i}`]}
+      canNavigateRight={i => i < 3 || ['15', '16', '18', '21'].includes(i) || value[`${i}`]}
       children={[
-        <Survey1 />,
-        <Survey2 />,
+        <Survey1 key={1}/>,
+        <Survey2 key={2}/>,
         <Survey3 onChange={onChangeHandler} key={3} value={value['3']} />,
         <Survey4 onChange={onChangeHandler} key={4} value={value['4']} />,
         <Survey5 onChange={onChangeHandler} key={5} value={value['5'] ? value['5'] : {}} />,
