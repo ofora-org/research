@@ -9,7 +9,7 @@ const getScreenColor = screen => {
 }
 
 const getLogoColor = screen => {
-  if ([1,6,12,15,16,28].includes(screen)) return 'transparent'
+  if ([1,6,10,12,15,16,28].includes(screen)) return 'transparent'
   if ([2].includes(screen)) return '#FF001D'
   if ([29].includes(screen)) return '#dc0596'
   return 'white'

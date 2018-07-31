@@ -37,6 +37,9 @@ const CustomHead = () =>
           fill: inherit;
           cursor: pointer;
         }
+        svg path {
+          transition: .4s fill;
+        }
         a:visited { color: inherit; }
         a:focus, input:focus, textarea:focus { outline: none; }
         input {

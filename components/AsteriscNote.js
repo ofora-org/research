@@ -21,6 +21,7 @@ const AsteriscNote = ({children}) =>
       @media only screen and (min-width: 960px) {
         p {
           padding-left: 3px;
+          font-size: 1.333em;
         }
       }
     `}</style>
