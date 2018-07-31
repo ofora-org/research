@@ -52,7 +52,6 @@ const Content = ({value, onChange}) =>
         display: flex;
         flex-direction: column;
         max-height: 100%;
-        width: 60%;
       }
       .title {
         padding-right: 90px;

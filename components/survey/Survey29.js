@@ -22,6 +22,9 @@ const Content = ({value, onChange}) =>
         background: #dc0596;
         z-index: -1;
       }
+      a {
+        box-shadow: 0px -4px 0px 0px yellow inset;
+      }
       .content {
         display: flex;
         flex-direction: column;

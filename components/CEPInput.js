@@ -7,7 +7,7 @@ const CEPInput = props =>
   <div className='root'>
     <div>
       <div><InputMask {...props} mask="99999-999" maskChar="" placeholder='00000-000' /></div>
-      <a onClick={props.handleSearchCepShow} target='_blank'>Buscar CEP</a>
+      <a onClick={props.handleSearchCepShow} target='_blank'>Não sei meu CEP</a>
     </div>
     {props.isSearchCepVisible &&
       <div className='search-cep'>
@@ -24,7 +24,10 @@ const CEPInput = props =>
     <style jsx>{`
       a {
         font-size: 16px;
-        display: block;
+        display: inline-block;
+        color: #bfbfbf;
+        font-weight: bold;
+        box-shadow: 0px -4px 0px 0px white inset;
       }
       .search-cep {
         position: absolute;
