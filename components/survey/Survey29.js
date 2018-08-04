@@ -14,7 +14,8 @@ const Content = ({value, onChange}) =>
     <div className='background' />
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
     <p>Sua contribuição foi fundamental para o Fora!</p>
-    <p>Siga para o <a href="https://ofora.org/">site</a>, <a href="https://facebook.com/">Facebook</a> ou <a href="https://instagram.com/">Instagram.</a></p>
+    <p>Siga para o <a href="https://ofora.org/">site</a>, <a href="https://facebook.com/">Facebook</a> ou <a href="https://instagram.com/">Instagram.</a></p><br />
+    <input type='text' placeholder='email' onChange={e => onChange(29, e.target.value)} />
     <style jsx>{`
       .background {
         position: absolute;
@@ -24,6 +25,8 @@ const Content = ({value, onChange}) =>
       }
       a {
         box-shadow: 0px -4px 0px 0px yellow inset;
+        height: 25px;
+        display: inline-block;
       }
       .content {
         display: flex;
@@ -36,6 +39,7 @@ const Content = ({value, onChange}) =>
         display: block;
         font-size: 35px;
         color: white;
+        line-height: 1.2em
       }
       @media only screen and (min-width: 720px) {
         .title {

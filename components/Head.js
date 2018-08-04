@@ -83,6 +83,9 @@ const CustomHead = () =>
           resize: none;
           font-size: 1.3em;
         }
+        input[type="text"] {
+          width: 100%;
+        }
       `}
     </style>
   </div>

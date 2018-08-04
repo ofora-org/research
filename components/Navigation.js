@@ -60,7 +60,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       {children}
     </div>
     <div className='control'>
-      {currentScreen !== 0 ?
+      {currentScreen !== 0 && currentScreen != children.length-1 ?
         <span className='left' onClick={onLeftClickHandler}>←</span>
       : null}
       {(currentScreen !== children.length-1) ?
@@ -77,11 +77,11 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         color: ${color}
       }
       
-      @media only screen and (min-width: 720px) {
-        .choice-item:hover {
-          background: ${color};
-        }
+      .choice-item:hover,
+      .choice-item:active {
+        background: ${color};
       }
+
       .logo-color {
         fill: ${getLogoColor(parseInt(children[currentScreen].key))}
       }

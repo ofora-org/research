@@ -11,7 +11,7 @@ const AsteriscNote = ({children}) =>
       }
       @media only screen and (min-width: 720px) {
         p {
-          font-size: 1rem;
+          font-size: 18px;
           padding-left: 3px;
           position: absolute;
           bottom: 10px;
