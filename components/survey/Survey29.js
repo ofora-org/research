@@ -9,13 +9,14 @@ const Survey29 = (props) =>
    right={<Image />}
   />
 
-const Content = ({value, onChange}) =>
+const Content = ({value, onChange, onButtonClick}) =>
   <div className='content'>
     <div className='background' />
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
     <p>Sua contribuição foi fundamental para o Fora!</p>
     <p>Siga para o <a href="https://ofora.org/">site</a>, <a href="https://facebook.com/">Facebook</a> ou <a href="https://instagram.com/">Instagram.</a></p><br />
     <input type='text' placeholder='email' onChange={e => onChange(29, e.target.value)} />
+    <button onClick={onButtonClick}>enviar</button>
     <style jsx>{`
       .background {
         position: absolute;

@@ -71,7 +71,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey26 onChange={onChangeHandler} key={26} value={value['26']} />,
         <Survey27 onChange={onChangeHandler} key={27} value={value['27']} />,
         <Survey28 onChange={onChangeHandler} key={28} value={value['28']} />,
-        <Survey29 onChange={onChangeHandler} key={29} value={value['29']} />
+        <Survey29 onChange={onChangeHandler} key={29} value={value['29']} onButtonClick={()=>onNavigateHandler(29,29)}/>
       ]}
     />
     <style jsx>{`
