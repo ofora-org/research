@@ -4,7 +4,7 @@ import Head from 'next/head'
 const CustomHead = () =>
   <div>
     <Head>
-      <title>Pesquisa Fora</title>
+      <title>Como você vive o lado de Fora?</title>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='theme-color' content='#ededed' />
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' rel='stylesheet' />
@@ -13,6 +13,7 @@ const CustomHead = () =>
       <meta property='og:image' content='' />
       <meta property='og:description' content='Descrição para Pesquisa Fora' />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable='no' />
+        <link rel='icon' type='image/png' sizes='16x16' href='https://ofora.org/static/favicon-16x16.png' />
     </Head>
       <style jsx global>{`
         html, body, #__next {
