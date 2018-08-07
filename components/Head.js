@@ -13,7 +13,9 @@ const CustomHead = () =>
       <meta property='og:image' content='' />
       <meta property='og:description' content='Descrição para Pesquisa Fora' />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable='no' />
-        <link rel='icon' type='image/png' sizes='16x16' href='https://ofora.org/static/favicon-16x16.png' />
+      <link rel='icon' type='image/png' sizes='16x16' href='https://ofora.org/static/favicon-16x16.png' />
+      <link rel='icon' type='image/png' sizes='32x32' href='https://ofora.org/static/favicon-32x32.png' />
+      <link rel='icon' type='image/png' sizes='64x64' href='https://ofora.org/static/favicon-64x64.png' />
     </Head>
       <style jsx global>{`
         html, body, #__next {
@@ -55,10 +57,10 @@ const CustomHead = () =>
           font-size: 1.3em;
         }
         select {
-          color: white;
+          color: #828282;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: white;
+            color: #828282;
             opacity: 1; /* Firefox */
         }
         :-ms-input-placeholder { /* Internet Explorer 10-11 */

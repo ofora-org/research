@@ -229,7 +229,7 @@ const Title = ({children, value: { state, country }, onChange}) =>
         background: none;
         padding: 5px;
         border: none;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid #828282;
         font-family: inherit;
         font-size: inherit;
         outline: none;
