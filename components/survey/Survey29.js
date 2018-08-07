@@ -16,7 +16,7 @@ const Content = ({value, onChange, onButtonClick}) =>
     <p>Sua contribuição foi fundamental para o Fora!</p>
     <p>Siga para o <a href="https://ofora.org/">site</a>, <a href="https://facebook.com/">Facebook</a> ou <a href="https://instagram.com/">Instagram.</a></p><br />
     <input type='text' placeholder='email' onChange={e => onChange(29, e.target.value)} />
-    <button onClick={onButtonClick}>enviar</button>
+    <div><a onClick={onButtonClick}>enviar</a></div>
     <style jsx>{`
       .background {
         position: absolute;

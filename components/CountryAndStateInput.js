@@ -4,7 +4,7 @@ import { withState, withHandlers, compose } from 'recompose'
 const Title = ({children, value: { state, country }, onChange}) =>
   <div className='root'>
     <div>
-      <select name='country' defaultValue="País" selected={country ? country : "País"} onChange={e => onChange({state, country: e.target.value})}>
+      <select name='country' className={country && 'selected'}  defaultValue="País" selected={country ? country : "País"} onChange={e => onChange({state, country: e.target.value})}>
          <option value="País" disabled>País</option>
          <option value="Brasil">Brasil</option>
          <option value="África do Sul">África do Sul</option>
@@ -184,7 +184,7 @@ const Title = ({children, value: { state, country }, onChange}) =>
     </div>
     {country === 'Brasil' ?
       <div>
-        <select name='state' defaultValue="Estado" selected={state ? state : "Estado"} onChange={e => onChange({country, state: e.target.value})}>
+        <select name='state' defaultValue="Estado" className={state && 'selected'} selected={state ? state : "Estado"} onChange={e => onChange({country, state: e.target.value})}>
            <option disabled value="Estado">Estado</option>
            <option value="AC">Acre</option>
            <option value="AL">Alagoas</option>
@@ -232,7 +232,6 @@ const Title = ({children, value: { state, country }, onChange}) =>
         border-bottom: 2px solid white;
         font-family: inherit;
         font-size: inherit;
-        color: inherit;
         outline: none;
       }
     `}</style>

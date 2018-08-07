@@ -42,7 +42,8 @@ const CustomHead = () =>
         }
         a:visited { color: inherit; }
         a:focus, input:focus, textarea:focus { outline: none; }
-        input {
+        input,
+        select {
           font-size: inherit;
           font-weight: 600;
           font-family: inherit;
@@ -51,6 +52,9 @@ const CustomHead = () =>
           border: none;
           margin: 0;
           font-size: 1.3em;
+        }
+        select {
+          color: white;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: white;

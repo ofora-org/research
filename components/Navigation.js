@@ -73,8 +73,9 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
       }
       input,
       textarea,
+      select.selected,
       .navigation-color {
-        color: ${color}
+        color: ${color} !important
       }
       
       .choice-item:hover,
