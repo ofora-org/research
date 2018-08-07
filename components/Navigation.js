@@ -5,6 +5,7 @@ import Swipeable from 'react-swipeable'
 const getScreenColor = screen => {
   if (screen < 4) return '#FF001D'
   if (screen < 9) return '#FF7401'
+  if ([29].includes(screen)) return 'white'
   return '#0009FF'
 }
 
@@ -32,7 +33,7 @@ const enhance = compose(
   withProps(
     ({canNavigateRight, currentScreen, children}) => ({
       canNavigateRight: canNavigateRight(children[currentScreen].key || currentScreen),
-      color: getScreenColor(children[currentScreen].key || currentScreen)
+      color: getScreenColor(parseInt(children[currentScreen].key) || currentScreen)
     })
   ),
   lifecycle({
@@ -55,7 +56,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
   onSwipedRight={currentScreen !== 0 && onLeftClickHandler}
 >
   <div className='wrapper'>
-    <div className='navigationBar' />
+    {currentScreen !== 0 && <div className='navigationBar' />}
     <div className='navigationWrapper'>
       {children}
     </div>
