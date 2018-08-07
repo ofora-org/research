@@ -118,7 +118,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         bottom: 20px;
         font-size: 80px;
         transition: .5s right .2s;
-        color: #bfbfbf;
+        color: #5b5b5b;
       }
       .control .right {
         color: ${canNavigateRight && color};
