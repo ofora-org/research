@@ -3,7 +3,7 @@ import { withState, withHandlers, compose, withProps, lifecycle } from 'recompos
 import Swipeable from 'react-swipeable'
 
 const getScreenColor = screen => {
-  if (screen < 4) return '#FF001D'
+  if (screen < 5) return '#FF001D'
   if (screen < 9) return '#FF7401'
   if ([29].includes(screen)) return 'white'
   return '#0009FF'
