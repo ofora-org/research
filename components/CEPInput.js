@@ -18,7 +18,7 @@ const CEPInput = props =>
           <input type='text' placeholder='UF' size={5} maxLength={2} className='uf' />
           <input type='text' placeholder='Cidade' size={9} className='city' />
           <input type='text' placeholder='Rua' className='street' />
-          <div><a onClick={props.handleSearchCepSubmit}>Buscar</button></a>
+          <div><a onClick={props.handleSearchCepSubmit}>Buscar</a></div>
         </div>
       </div>
     }
