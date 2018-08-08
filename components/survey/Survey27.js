@@ -20,7 +20,7 @@ const Content = ({value, onChange}) =>
       onChange={itemValue => onChange(27, {...value, 1: itemValue})}
       value={value && value[1]}
       other='Sim'
-      otherPlaceholder='Comente sobre a duração'
+      otherPlaceholder='Comente a duração'
     />
     <p>Você achou alguma pergunta e/ou opções de resposta estranha, invasiva e/ou descabida?</p>
     <SingleChoice
@@ -28,14 +28,14 @@ const Content = ({value, onChange}) =>
       onChange={itemValue => onChange(27, {...value, 2: itemValue})}
       value={value && value[2]}
       other='Sim'
-      otherPlaceholder='Comente sobre seus incômodos'
+      otherPlaceholder='Comente incômodos'
     />
     <p>Você teve dificuldade para entender alguma palavra ou termo que foi usado?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 3: itemValue})}
       value={value && value[3]}
-      otherPlaceholder='Comente sobre a linguagem'
+      otherPlaceholder='Comente a linguagem'
       other='Sim'
     />
     <p>Você teve algum problema técnico ou funcional para mexer na ferramenta?</p>
@@ -43,7 +43,7 @@ const Content = ({value, onChange}) =>
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 4: itemValue})}
       value={value && value[4]}
-      otherPlaceholder='Comente sobre o manuseio'
+      otherPlaceholder='Comente o funcionamento'
       other='Sim'
     />
 

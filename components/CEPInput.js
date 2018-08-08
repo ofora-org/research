@@ -2,6 +2,7 @@ import React from 'react'
 import { withState, withHandlers, compose } from 'recompose'
 import InputMask from 'react-input-mask';
 import fetch from 'isomorphic-unfetch'
+import Subtitle from 'components/Subtitle'
 
 const CEPInput = props =>
   <div className='root'>
@@ -13,11 +14,11 @@ const CEPInput = props =>
       <div className='search-cep'>
         <div className='search-cep' onClick={props.handleSearchCepShow} />
         <div className='inner'>
-          <h3>Insira a baixo</h3>
+          <Subtitle>Insira a baixo:</Subtitle>
           <input type='text' placeholder='UF' size={5} maxLength={2} className='uf' />
           <input type='text' placeholder='Cidade' size={9} className='city' />
           <input type='text' placeholder='Rua' className='street' />
-          <div><button onClick={props.handleSearchCepSubmit}>Buscar</button></div>
+          <div><a onClick={props.handleSearchCepSubmit}>Buscar</button></a>
         </div>
       </div>
     }
