@@ -57,10 +57,10 @@ const CustomHead = () =>
           font-size: 1.3em;
         }
         select {
-          color: #828282;
+          color: #a0a0a0;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #828282;
+            color: #a0a0a0;
             opacity: 1; /* Firefox */
         }
         :-ms-input-placeholder { /* Internet Explorer 10-11 */

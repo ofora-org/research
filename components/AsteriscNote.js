@@ -6,7 +6,7 @@ const AsteriscNote = ({children}) =>
     <style jsx>{`
       p {
         font-size: 14px;
-        color: #5b5b5b;
+        color: #787878;
         margin-top: .4em;
       }
       @media only screen and (min-width: 720px) {

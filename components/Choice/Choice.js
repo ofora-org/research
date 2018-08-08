@@ -4,7 +4,7 @@ const Choice = ({children, onClick, isSelected}) =>
     <style jsx>{`
       div {
         padding: 0.4em 0.6em;
-        background: #5b5b5b;
+        background: #787878;
         cursor: pointer;
         color: white;
         font-weight: 600;
