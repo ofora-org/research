@@ -14,11 +14,13 @@ const Content = ({value, onChange, onButtonClick}) =>
     <div className='background' />
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
     <p>Para não ficar de Fora e receber os resultados da pesquisa, notícias sobre atividades e convites para participar, deixe seu e-mail aqui:</p>
-    <input type='text' placeholder='Digite aqui' onChange={e => onChange(29, e.target.value)} />
+    <input type='text' placeholder='Digite aqui seu email' onChange={e => onChange(29, e.target.value)} />
     <div><a onClick={onButtonClick}>Enviar</a></div>
-<div><a href="https://ofora.org/">site</a></div>
-<div><a href="https://instagram.com/">Instagram</a></div>
-<div><a href="https://facebook.com/">Facebook</a></div>
+    <br />
+    <br />
+    <div><a href="https://ofora.org/">Site</a></div>
+    <div><a href="https://instagram.com/">Instagram</a></div>
+    <div><a href="https://facebook.com/">Facebook</a></div>
     <style jsx>{`
       .background {
         position: absolute;
