@@ -11,7 +11,7 @@ const Survey20 = (props) =>
 
 const Content = ({onChange, value}) =>
   <div className='content'>
-    <Title><span className='title'>Quais meios de transporte você costuma usar para circular em São Paulo?</span></Title>
+    <Title><span className='title'>Quais meios de transporte você usa para circular em São Paulo?</span></Title>
     <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       choices={[

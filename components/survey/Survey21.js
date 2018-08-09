@@ -13,7 +13,7 @@ const Survey11 = () =>
 const Content = () =>
   <div className='content'>
     <Title><span className='title'>Quais são seus espaços públicos de convívio* favoritos de São Paulo?</span></Title>
-    <Subtitle>Se não souber ou tiver nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo:</Subtitle>
+    <Subtitle>Se não souber o nome oficial, pode indicar o nome que você usa para o local e uma rua ou ponto próximo!</Subtitle>
     <div className='formGroup'>
       <label><span>#1</span> Favorito</label>
       <input type='text' placeholder='Digite aqui sua resposta' />

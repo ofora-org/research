@@ -15,7 +15,7 @@ const Content = ({onChange, value}) =>
     <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:<br />
     Se sente inseguro ou em perigo nos espaços públicos de convívio*
     </span></Title>
-    <br />
+    <Subtitle>Selecione uma opção:</Subtitle>
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[

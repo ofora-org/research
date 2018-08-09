@@ -11,7 +11,8 @@ const Survey1 = () =>
 const Content = () =>
   <div className='content navigation-color '>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
-    <p>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</p>
+    <p>Suas respostas irão gerar reflexões e debates públicos, e também orientarão as ações culturais e intervenções urbanas do Fora na internet e em centros e periferias de São Paulo.</p>
+    <p>É rápido, confidencial e nada será usado para fins comerciais!</p>
     <p><a href="https://ofora.org/o-que-e">Saiba mais</a></p>
     <style jsx>{`
       .title {

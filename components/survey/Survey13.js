@@ -12,21 +12,21 @@ const Survey10 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Na sua opinião, quais mudanças você faria no espaço público de convívio* que você acabou indicar?</span></Title>
-    <Subtitle>Pode marcar várias!!</Subtitle>
+    <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       choices={[
         'Nada',
-        'Infraestrutura do espaço',
+        'Melhorar infraestrutura do espaço',
         'Cercar com grades',
         'Ter internet grátis',
         'Plantar árvores/plantas',
-        'Bebedouros, bicas e/ou fontes',
-        'Iluminação pública',
+        'Colocar bebedouros, bicas, fontes',
+        'Melhorar iluminação pública',
         'Mais oferta de atividades culturais',
-        'Coleta de lixo',
-        'Manutenção mais frequente',
-        'Instalar mobiliários para crianças, idosos, esportes, animais e/ou outros',
-        'Proibir ou restringir sons, festas, shows e outras atividades semelhantes',
+        'Melhorar coleta de lixo',
+        'Melhorar manutenção geral',
+        'Instalar mobiliários para exercícios, brincadeiras, animais, etc.',
+        'Proibir ou restringir sons, festas, shows e semelhantes',
         'Tirar grades ou barreiras de acesso ao espaço',
         'Mais feiras e pontos de comércio'
       ]}

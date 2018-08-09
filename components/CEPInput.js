@@ -8,7 +8,7 @@ const CEPInput = props =>
   <div className='root'>
     <div>
       <div><InputMask {...props} mask="99999-999" maskChar="" placeholder='00000-000' /></div>
-      <a onClick={props.handleSearchCepShow} target='_blank'>Buscar CEP</a>
+      <a onClick={props.handleSearchCepShow} target='_blank'>Buscar meu CEP</a>
     </div>
     {props.isSearchCepVisible &&
       <div className='search-cep'>

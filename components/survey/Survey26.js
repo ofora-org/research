@@ -13,8 +13,9 @@ const Survey26 = props =>
 const Content = ({onChange, value}) =>
   <div className='content'>
     <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:<br />
-    Realiza ou gostaria de realizar atividades culturais, sociais e/ou econômicas em espaços públicos de convívio*
-    </span></Title><br />
+    Organiza ou gostaria de organizar atividades culturais, sociais e/ou econômicas em espaços públicos de convívio*
+    </span></Title>
+    <Subtitle>Selecione uma opção:</Subtitle>
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[

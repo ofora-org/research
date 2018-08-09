@@ -12,7 +12,7 @@ const Survey11 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Qual seu CEP?</span></Title>
-    <Subtitle>Não se preocupe, não é possível ter seu endereço completo pelo CEP! Serve apenas para saber aproximadamente a área da cidade que você mora!</Subtitle>
+    <Subtitle>Não se preocupe, não dá para achar seu endereço completo pelo CEP, ele serve apenas para indicar aproximadamente a área da cidade que você mora.</Subtitle>
     <div className='formGroup'>
       <label className='navigation-color'>Meu CEP é:</label>
       <CEPInput onChange={e => onChange(11,e.target.value)} value={value['11']} />

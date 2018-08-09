@@ -13,7 +13,7 @@ const Survey27 = props =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Avaliação da Pesquisa</span></Title>
-    <Subtitle>Por favor, seja sincero e ajude a melhorar a pesquisa! Obrigada!</Subtitle>
+    <Subtitle>Por favor, ajude a melhorar a pesquisa com as respostas a seguir:</Subtitle>
     <p>Você achou a pesquisa longa demais?</p>
     <SingleChoice
       choices={['Não']}
@@ -43,7 +43,7 @@ const Content = ({value, onChange}) =>
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 4: itemValue})}
       value={value && value[4]}
-      otherPlaceholder='Comente o funcionamento'
+      otherPlaceholder='Comente o manuseio'
       other='Sim'
     />
 

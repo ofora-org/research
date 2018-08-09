@@ -1,9 +1,9 @@
 import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
-import Subtitle from 'components/Subtitle'
 import SingleChoice from 'components/Choice/SingleChoice'
 import AsteriscNote from '../AsteriscNote';
+import Subtitle from '../Subtitle';
 
 const Survey22 = props =>
   <ContentWrapper
@@ -16,7 +16,7 @@ const Content = ({onChange, value}) =>
       Na sua vivência em São Paulo, com que frequência você:<br />
       Sofre com racismo, machismo, homofobia e/ou outras discriminações em espaços públicos de convívio*
     </span></Title>
-    <br />
+    <Subtitle>Selecione uma opção:</Subtitle>
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[

@@ -15,7 +15,7 @@ const Survey4 = (props) =>
     <Subtitle>Digite abaixo:</Subtitle>
     <input type='text' maxLength={4} placeholder='0000' value={age} onKeyPress={handleKeyPress} onChange={e => onChange(5, {...value, age: e.target.value})} />
     <Title><span>Onde você nasceu?</span></Title>
-    <Subtitle>Selecione uma opção da lista!</Subtitle>
+    <Subtitle>Selecione uma opção da lista:</Subtitle>
     <CountryAndStateInput value={location ? location : {}} onChange={itemValue => onChange(5, {...value, location: itemValue})} />
     <style jsx>{`
       .content {

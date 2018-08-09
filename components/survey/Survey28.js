@@ -12,9 +12,9 @@ const Survey28 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title>
-      <span className='title'>Na sua opinião, quais foram os melhores e piores aspectos desta pesquisa?</span>
+      <span className='title'>Se tiver quaisquer outros comentários e reflexões, bota pra Fora:</span>
     </Title>
-    <Subtitle>Resuma no campo abaixo:</Subtitle>
+    <Subtitle>Caso não tenha, continue para finalizar.</Subtitle>
     <input
       type='text'
       placeholder='Digite aqui sua resposta'

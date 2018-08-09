@@ -12,7 +12,7 @@ const Survey14 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Nos últimos 3 meses, com que frequência você foi à cidade de São Paulo?</span></Title>
-    <Subtitle>Selecione uma opção abaixo:</Subtitle>
+    <Subtitle>Selecione uma opção:</Subtitle>
     <SingleChoice
       choices={[
         '5 a 7 vezes por semana',

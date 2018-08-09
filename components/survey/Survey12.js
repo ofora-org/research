@@ -12,7 +12,7 @@ const Survey12 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Qual é o espaço público de convívio* que você {value['10'] && value[10].includes('Moro') ? 'frequenta mais perto da sua casa?' : 'mais frequenta quando está em São Paulo?'}</span></Title>
-    <Subtitle>Se não souber nome oficial, escreva como você chama o local e indique uma rua ou ponto próximo!</Subtitle>
+    <Subtitle>Se não souber o nome oficial, pode indicar o nome que você usa para o local e uma rua ou ponto próximo!</Subtitle>
     <textarea
       type='text' 
       placeholder='Digite aqui sua resposta'

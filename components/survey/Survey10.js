@@ -13,7 +13,7 @@ const Survey10 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>O que você faz na cidade de São Paulo?</span></Title>
-    <Subtitle>Pode selecionar mais de uma opção:</Subtitle>
+    <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       choices={[
         'Moro',

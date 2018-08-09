@@ -11,7 +11,7 @@ const Survey12 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>O que você costuma fazer quando visita São Paulo?</span></Title>
-    <Subtitle>Pode usar só palavras-chave, é rápido:</Subtitle>
+    <Subtitle>Pode usar só palavras-chave!</Subtitle>
     <textarea
       type='text'
       placeholder='Digite aqui sua resposta'
