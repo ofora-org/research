@@ -14,7 +14,7 @@ const CEPInput = props =>
       <div className='search-cep'>
         <div className='search-cep' onClick={props.handleSearchCepShow} />
         <div className='inner'>
-          <Subtitle>Insira a baixo:</Subtitle>
+          <Subtitle>Insira abaixo:</Subtitle>
           <input type='text' placeholder='UF' size={5} maxLength={2} className='uf' />
           <input type='text' placeholder='Cidade' size={9} className='city' />
           <input type='text' placeholder='Rua' className='street' />
