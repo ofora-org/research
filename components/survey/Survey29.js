@@ -2,20 +2,16 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
+import { compose, withState } from 'recompose'
 
-const Survey29 = (props) =>
-  <ContentWrapper
-   left={<Content {...props} />}
-   right={<Image />}
-  />
-
-const Content = ({value, onChange, onButtonClick}) =>
+const rawContent = ({value, onChange, onButtonClick, sent, setSent}) =>
   <div className='content'>
     <div className='background' />
     <Title><span className='title'>Acabou, valeu, obrigado!</span></Title>
     <p>Para não ficar de Fora e receber os resultados da pesquisa, notícias sobre atividades e convites para participar, deixe seu e-mail aqui:</p>
-    <input type='text' placeholder='Digite aqui seu email' onChange={e => onChange(29, e.target.value)} />
-    <div><a onClick={onButtonClick}>Enviar</a></div>
+    {!sent && <input type='text' placeholder='Digite aqui seu email' onChange={e => onChange(29, e.target.value)} />}
+    {sent && <p>Email enviado</p>}
+    <div><a className='send' onClick={() => {onButtonClick(); setSent(true)} }>Enviar</a></div>
     <br />
     <br />
     <div><a href="https://ofora.org/">Site</a></div>
@@ -32,6 +28,13 @@ const Content = ({value, onChange, onButtonClick}) =>
         box-shadow: 0px -4px 0px 0px yellow inset;
         height: 25px;
         display: inline-block;
+      }
+      .send {
+        box-shadow: 0px -4px 0px 0px white inset;
+        font-weight: bold;
+        color: #bfbfbf;
+        font-size: 0.75em;
+        line-height: 2em
       }
       .content {
         display: flex;
@@ -69,5 +72,16 @@ const Image = () =>
       }
     `}</style>
   </div>
+
+
+const Survey29 = (props) =>
+  <ContentWrapper
+   left={<Content {...props} />}
+   right={<Image />}
+  />
+
+const Content = compose(
+  withState('sent', 'setSent', false)
+)(rawContent)
 
 export default Survey29
