@@ -25,7 +25,7 @@ const Content = ({onChange, value}) =>
         'Movimentos sociais',
         'Associações de moradores',
         'Cidadãos afetados pela decisão',
-        'Todo/qualquer cidadão'
+        'Qualquer cidadão interessado'
       ]}
       onChange={itemValue => onChange(4,itemValue)}
       value={value}

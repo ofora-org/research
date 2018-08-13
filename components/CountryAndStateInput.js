@@ -186,6 +186,7 @@ const Title = ({children, value: { state, country }, onChange}) =>
       <div>
         <select name='state' defaultValue="Estado" className={state && 'selected'} selected={state ? state : "Estado"} onChange={e => onChange({country, state: e.target.value})}>
            <option disabled value="Estado">Estado</option>
+           <option value="SP">São Paulo</option>
            <option value="AC">Acre</option>
            <option value="AL">Alagoas</option>
            <option value="AP">Amapá</option>
@@ -210,7 +211,6 @@ const Title = ({children, value: { state, country }, onChange}) =>
            <option value="RO">Rondônia</option>
            <option value="RR">Roraima</option>
            <option value="SC">Santa Catarina</option>
-           <option value="SP">São Paulo</option>
            <option value="SE">Sergipe</option>
            <option value="TO">Tocantins</option>
         </select>
