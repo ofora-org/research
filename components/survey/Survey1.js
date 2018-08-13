@@ -12,7 +12,9 @@ const Content = () =>
   <div className='content navigation-color '>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
     <p>Suas respostas irão gerar reflexões e debates públicos, e também orientarão as ações culturais e intervenções urbanas do Fora na internet e em centros e periferias de São Paulo.</p>
-    <p>É rápido, confidencial e nada será usado para fins comerciais!</p>
+    <br />
+    <p>É <i>rápido</i>, confidencial e nada será usado para fins comerciais!</p>
+    <br />
     <p><a href="https://ofora.org/o-que-e" target="_blank">Saiba mais</a></p>
     <style jsx>{`
       .title {
@@ -20,6 +22,9 @@ const Content = () =>
       }
       a {
         box-shadow: 0px -4px 0px 0px white inset;
+      }
+      i {
+        font-weight: 600;
       }
       @media only screen and (min-width: 720px) {
         .title {

@@ -13,8 +13,7 @@ const Content = () =>
   <div className='wrapper'>
     <div className='background' />
     <div>
-      <Title><span className='title'>Suas respostas vão orientar as ações culturais e urbanísticas do Fora em centros e periferias de São Paulo.</span></Title>
-      <p>Vem compartilhar como você se sente nos espaços públicos de São Paulo.</p>
+      <Title><span className='title'>As perguntas a seguir são sobre suas experiências nos espaços públicos de convívio em São Paulo, ou seja, como você vive as ruas, praças, parques, quadras e outras áreas comuns da cidade.</span></Title>
     </div>
     <style jsx>{`
       .background {
