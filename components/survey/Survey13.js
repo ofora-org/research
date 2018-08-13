@@ -3,6 +3,7 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import MultipleChoice from 'components/Choice/MultipleChoice'
+import AsteriscNote from '../AsteriscNote';
 
 const Survey10 = (props) =>
   <ContentWrapper
