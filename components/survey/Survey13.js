@@ -34,6 +34,7 @@ const Content = ({value, onChange}) =>
       onChange={itemValue => onChange(13,itemValue)}
       value={value}
     />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;

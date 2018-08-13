@@ -3,6 +3,7 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import MultipleChoice from 'components/Choice/MultipleChoice'
+import AsteriscNote from '../AsteriscNote';
 
 const Survey9 = (props) =>
   <ContentWrapper
@@ -11,11 +12,11 @@ const Survey9 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Quais palavras melhor representam sua experiência nos espaços públicos de convívio* de São Paulo?</span></Title>
+    <Title><span className='title'>Quais 3 palavras melhor representam sua experiência nos espaços públicos de convívio* de São Paulo?</span></Title>
     <Subtitle>Selecione até três opções abaixo:</Subtitle>
     <MultipleChoice
       max={3}
-      other='Outros:'
+      other='Outras:'
       choices={[
         'Bem-Estar',
         'Repressão',
@@ -36,6 +37,7 @@ const Content = ({value, onChange}) =>
       onChange={newValue => onChange(9,newValue)}
       value={value}
     />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;
