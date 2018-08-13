@@ -18,7 +18,7 @@ const Content = ({value, onChange}) =>
       <CEPInput onChange={e => onChange(11,e.target.value)} value={value['11']} />
     </div>
     <div className='formGroup'>
-      <label className='navigation-color'>Não sei ou não quero dar meu CEP, mas moro em:</label>
+      <label className='navigation-color'>Não tenho ou não quero dar meu CEP, mas moro em:</label>
       <input
         type='text'
         maxLength={60}
