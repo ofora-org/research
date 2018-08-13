@@ -11,6 +11,7 @@ const Survey1 = () =>
 const Content = () =>
   <div className='content navigation-color '>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
+    <br />
     <p>Suas respostas irão gerar reflexões e debates públicos, e também orientarão as ações culturais e intervenções urbanas do Fora na internet e em centros e periferias de São Paulo.</p>
     <br />
     <p>É <i>rápido</i>, confidencial e nada será usado para fins comerciais!</p>

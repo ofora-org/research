@@ -7,7 +7,7 @@ import { compose, withState } from 'recompose'
 const rawContent = ({value, onChange, onButtonClick, sent, setSent}) =>
   <div className='content'>
     <div className='background' />
-    <Title><span className='title'>Acabou, valeu, obrigado!</span></Title><br />
+    <Title><span className='title'>Acabou, valeu, obrigado!</span></Title><br /><br />
     <p>Para não ficar de Fora e receber os resultados da pesquisa, notícias sobre atividades e convites para participar, deixe seu e-mail aqui:</p><br />
     {!sent && <input type='text' placeholder='Digite aqui seu email' onChange={e => onChange(29, e.target.value)} />}
     {sent && <p>Email enviado</p>}
