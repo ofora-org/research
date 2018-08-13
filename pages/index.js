@@ -133,7 +133,7 @@ export default compose(
     componentDidMount() {
       const entryId = window.localStorage.getItem("entryId")
       const entryValue = JSON.parse(window.localStorage.getItem("entryValue"))
-      entryValue && this.props.setValue(entryValue)
+      //entryValue && this.props.setValue(entryValue)
       console.log(entryValue)
     },
   })
