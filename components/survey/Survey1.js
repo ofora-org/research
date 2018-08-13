@@ -13,7 +13,7 @@ const Content = () =>
     <Title><span className='title'>O Fora precisa te ouvir!</span></Title>
     <p>Suas respostas irão gerar reflexões e debates públicos, e também orientarão as ações culturais e intervenções urbanas do Fora na internet e em centros e periferias de São Paulo.</p>
     <p>É rápido, confidencial e nada será usado para fins comerciais!</p>
-    <p><a href="https://ofora.org/o-que-e">Saiba mais</a></p>
+    <p><a href="https://ofora.org/o-que-e" target="_blank">Saiba mais</a></p>
     <style jsx>{`
       .title {
         font-size: 35px;

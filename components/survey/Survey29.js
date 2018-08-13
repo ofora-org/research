@@ -14,9 +14,9 @@ const rawContent = ({value, onChange, onButtonClick, sent, setSent}) =>
     <div><a className='send' onClick={() => {onButtonClick(); setSent(true)} }>Enviar</a></div>
     <br />
     <br />
-    <div><a href="https://ofora.org/">Site</a></div>
-    <div><a href="https://instagram.com/">Instagram</a></div>
-    <div><a href="https://facebook.com/">Facebook</a></div>
+    <div><a href="https://ofora.org/" target="_blank">Site</a></div>
+    <div><a href="https://www.instagram.com/foraofora/" target="_blank">Instagram</a></div>
+    <div><a href="https://www.facebook.com/foraofora/" target="_blank">Facebook</a></div>
     <style jsx>{`
       .background {
         position: absolute;
