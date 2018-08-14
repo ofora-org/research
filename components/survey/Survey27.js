@@ -22,7 +22,7 @@ const Content = ({value, onChange}) =>
       other='Sim'
       otherPlaceholder='Comente a duração'
     />
-    <p>Achou alguma pergunta ou opções de resposta // estranha, invasiva e/ou descabida?</p>
+    <p>Achou algo estranho, invasivo e/ou descabido?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 2: itemValue})}
@@ -30,7 +30,7 @@ const Content = ({value, onChange}) =>
       other='Sim'
       otherPlaceholder='Comente incômodos'
     />
-    <p>Teve dificuldade para entender alguma palavra // ou termo que foi usado?</p>
+    <p>Teve dificuldade para entender alguma palavra?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 3: itemValue})}
@@ -38,7 +38,7 @@ const Content = ({value, onChange}) =>
       otherPlaceholder='Comente a linguagem'
       other='Sim'
     />
-    <p>Você teve algum problema técnico ou funcional para // mexer na ferramenta?</p>
+    <p>Você teve algum problema técnico ou funcional?</p>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(27, {...value, 4: itemValue})}

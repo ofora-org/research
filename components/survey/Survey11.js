@@ -15,7 +15,7 @@ const Content = ({value, onChange}) =>
     <Subtitle>Não se preocupe, não dá para achar seu endereço completo pelo CEP, ele serve apenas para indicar aproximadamente a área da cidade que você mora.</Subtitle>
     <div className='formGroup'>
       <label className='navigation-color'>Meu CEP é:</label>
-      <CEPInput onChange={e => onChange(11,e.target.value)} value={value['11']} />
+      <CEPInput onChange={e => onChange(11,{ ...value[11], cep: e.target.value })} value={value['11'] && value['11'].cep} />
     </div>
     <div className='formGroup'>
       <label className='navigation-color'>Não tenho ou não quero dar meu CEP, mas moro em:</label>
@@ -23,6 +23,8 @@ const Content = ({value, onChange}) =>
         type='text'
         maxLength={60}
         placeholder={value['10'] && value['10'].includes('Moro') ? 'Bairro/Área' : 'Cidade (UF)' }
+        onChange={e => onChange(11,{ ...value[11], city: e.target.value })}
+        value={value['11'] && value['11'].city}
       />
     </div>
     <style jsx>{`
