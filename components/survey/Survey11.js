@@ -13,6 +13,7 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Qual seu CEP?</span></Title>
     <Subtitle>Não se preocupe, não dá para achar seu endereço completo pelo CEP, ele serve apenas para indicar aproximadamente a área da cidade que você mora.</Subtitle>
+    <br />
     <div className='formGroup'>
       <label className='navigation-color'>Meu CEP é:</label>
       <CEPInput onChange={e => onChange(11,{ ...value[11], cep: e.target.value })} value={value['11'] && value['11'].cep} />

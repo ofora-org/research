@@ -26,9 +26,9 @@ const CEPInput = props =>
       a {
         font-size: 16px;
         display: inline-block;
-        color: #bfbfbf;
         font-weight: bold;
         box-shadow: 0px -4px 0px 0px white inset;
+        color: #0009FF
       }
       .search-cep {
         position: absolute;
