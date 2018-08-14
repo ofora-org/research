@@ -70,7 +70,7 @@ const LeftContent = ({onChoiceChange, onChange, value}) =>
           padding-right: 0px;
         }
         .content {
-          font-size: .7em;
+          font-size: .63em;
         }
       }
       @media only screen and (min-width: 960px) {
@@ -78,7 +78,7 @@ const LeftContent = ({onChoiceChange, onChange, value}) =>
           padding-right: 0px;
         }
         .content {
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
     `}</style>
@@ -92,6 +92,8 @@ const RightContent = ({value}) =>
         display: flex;
         flex-direction: column;
         max-height: 100%;
+        position: relative;
+        z-index: -1;
       }
     `}</style>
   </div>
