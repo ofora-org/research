@@ -70,7 +70,7 @@ const LeftContent = ({onChoiceChange, onChange, value}) =>
           padding-right: 0px;
         }
         .content {
-          font-size: .63em;
+          font-size: .6em;
         }
       }
       @media only screen and (min-width: 960px) {
@@ -78,7 +78,7 @@ const LeftContent = ({onChoiceChange, onChange, value}) =>
           padding-right: 0px;
         }
         .content {
-          font-size: 0.9em;
+          font-size: .7em;
         }
       }
     `}</style>
