@@ -16,7 +16,6 @@ const Content = ({onChange, value}) =>
     Organiza ou gostaria de organizar atividades culturais, sociais e/ou econômicas em espaços públicos de convívio*
     </span></Title>
     <Subtitle>Selecione uma opção:</Subtitle>
-    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[
         'Frequentemente (ou sempre)',
@@ -26,6 +25,7 @@ const Content = ({onChange, value}) =>
       onChange={itemValue => onChange(26,itemValue)}
       value={value}
     />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;

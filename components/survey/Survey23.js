@@ -16,7 +16,6 @@ const Content = ({onChange, value}) =>
     Se sente inseguro ou em perigo nos espaços públicos de convívio*
     </span></Title>
     <Subtitle>Selecione uma opção:</Subtitle>
-    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[
         'Frequentemente (ou sempre)',
@@ -26,6 +25,7 @@ const Content = ({onChange, value}) =>
       onChange={itemValue => onChange(23,itemValue)}
       value={value}
     />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;

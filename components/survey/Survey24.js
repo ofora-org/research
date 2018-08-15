@@ -16,7 +16,6 @@ const Content = ({onChange, value}) =>
     Considera os espaços públicos de convívio* acessíveis para suas necessidades físicas, mentais ou sensoriais
     </span></Title>
     <Subtitle>Selecione uma opção:</Subtitle>
-    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <SingleChoice
       choices={[
         'Frequentemente (ou sempre)',
@@ -26,6 +25,7 @@ const Content = ({onChange, value}) =>
       onChange={itemValue => onChange(24,itemValue)}
       value={value}
     />
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;

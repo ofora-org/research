@@ -132,6 +132,10 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         padding: 0 10px;
         cursor: pointer;
       }
+      @media only screen and (max-width: 720px) {
+        .navigationWrapper {
+        }
+      }
       @media only screen and (min-width: 720px) {
         .wrapper {
 
