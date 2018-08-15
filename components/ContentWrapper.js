@@ -5,7 +5,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
     <div>
       {left}
     </div>
-    {right ? <div>{right}</div> : null}
+    {right ? <div className='right'>{right}</div> : null}
     <style jsx>{`
       .content-wrapper {
         min-width: 100%;
@@ -22,9 +22,13 @@ const ContentWrapper = ({left, right, midpoint}) =>
         font-size: 18px;
       }
       .content-wrapper > div:first-child {
-        min-height: 50vh;
         box-sizing: border-box;
         flex: ${midpoint ? midpoint*2 : 1}
+      }
+      @media only screen and (max-width: 720px) {
+        .content-wrapper > div.right {
+          height: 60vh
+        }
       }
       @media only screen and (min-width: 720px) {
         .content-wrapper {
