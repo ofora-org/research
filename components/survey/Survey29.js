@@ -63,14 +63,12 @@ const rawContent = ({value, onChange, onButtonClick, sent, setSent}) =>
 const Image = () =>
   <div className='image'>
     <style jsx>{`
-      @media only screen and (min-width: 720px) {
-        .image {
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
-          background-image: url('/static/end1.jpg');
-          background-size: cover;
-          background-position: center center;
-        }
+      .image {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: url('/static/end1.jpg');
+        background-size: cover;
+        background-position: center center;
       }
     `}</style>
   </div>

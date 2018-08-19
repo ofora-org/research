@@ -46,8 +46,7 @@ const Content = () =>
       <style jsx>{`
         @media only screen and (max-width: 720px) {
           .wrapper {
-            margin-top: 20vh;
-            text-align: center;
+            text-align: left;
           }
         }
         @media only screen and (min-width: 720px) {
