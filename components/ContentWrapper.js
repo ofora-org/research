@@ -20,6 +20,7 @@ const ContentWrapper = ({left, right, midpoint}) =>
         padding-top: 35px;
         position: relative;
         font-size: 18px;
+        padding-bottom: 80px;
       }
       .content-wrapper > div:first-child {
         box-sizing: border-box;

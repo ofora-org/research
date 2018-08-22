@@ -116,7 +116,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
         right: ${currentScreen === 0 ? '50%' : '20px'};
         transform: translateX(${currentScreen === 0 ? '50%' : '0'});
         bottom: 20px;
-        font-size: 80px;
+        font-size: 65px;
         transition: .5s right .2s;
         color: #787878;
       }
@@ -141,7 +141,7 @@ const Navigation = ({children, currentScreen, onRightClickHandler, onLeftClickHa
 
         }
         .control {
-
+          font-size: 80px;
         }
       }
     `}</style>
