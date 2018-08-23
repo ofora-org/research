@@ -79,6 +79,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
       .navigation-wrapper,
       .content-wrapper {
         height: 100%;
+        overflow: hidden;
       }
       .logo {
         position: fixed;
