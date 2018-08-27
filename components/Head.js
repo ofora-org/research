@@ -9,9 +9,9 @@ const CustomHead = () =>
       <meta name='theme-color' content='#ededed' />
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' rel='stylesheet' />
       {/*<meta property='og:type' content='article' />*/}
-      <meta property='og:title' content='Pesquisa Fora' />
+      <meta property='og:title' content='Como você vive o lado de Fora?' />
       <meta property='og:image' content='https://pesquisa.ofora.org/static/ogimage.jpg' />
-      <meta property='og:description' content='Descrição para Pesquisa Fora' />
+      <meta property='og:description' content='Suas respostas irão gerar reflexões e debates públicos, e também orientarão as ações culturais e intervenções urbanas do Fora na internet e em centros e periferias de São Paulo.' />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable='no' />
       <link rel='icon' type='image/png' sizes='16x16' href='https://ofora.org/static/favicon-16x16.png' />
       <link rel='icon' type='image/png' sizes='32x32' href='https://ofora.org/static/favicon-32x32.png' />
