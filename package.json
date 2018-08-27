@@ -29,8 +29,8 @@
     "start": "NODE_ENV=production node server.js",
     "pretest": "eslint --ignore-path/ .gitignore .",
     "deploy": "now -e NODE_ENV=production -e AIRTABLE_API_KEY=$AIRTABLE_API_KEY --token $NOW_TOKEN --npm --public -T ofora",
-    "deploy:prod": "now -e NODE_ENV=production -e AIRTABLE_API_KEY=$AIRTABLE_API_KEY --token $NOW_TOKEN --npm",
     "alias": "now alias pesquisa-ofora-org-$TRAVIS_PULL_REQUEST_BRANCH$TRAVIS_BRANCH --token=$NOW_TOKEN -T ofora",
+    "deploy:prod": "now -e NODE_ENV=production -e AIRTABLE_API_KEY=$AIRTABLE_API_KEY --token $NOW_TOKEN --npm",
     "alias:prod": "now alias pesquisa.ofora.org --token=$NOW_TOKEN"
   },
   "now": {

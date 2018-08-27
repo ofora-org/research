@@ -11,3 +11,9 @@ jobs:
       script: npm run deploy
     - stage: alias to branch
       script: npm run alias
+    - stage: deploy prod
+      script: npm run deploy:prod
+      if: branch = master AND type = push
+    - stage: alias to prod
+      script: npm run alias:prod
+      if: branch = master AND type = push
