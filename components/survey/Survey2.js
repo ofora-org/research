@@ -13,7 +13,9 @@ const Content = () =>
   <div className='wrapper'>
     <div className='background' />
     <div>
-      <Title><span className='title'>As perguntas a seguir são sobre suas experiências nos espaços públicos de convívio em São Paulo, ou seja, como você vive as ruas, praças, parques, quadras e outras áreas comuns da cidade.</span></Title>
+      <Title>
+        <span className='title'>As perguntas a seguir são sobre suas experiências nos espaços públicos de convívio em São Paulo, ou seja, como você vive as ruas, praças, parques, quadras e outras áreas comuns da cidade.</span>
+      </Title>
     </div>
     <style jsx>{`
       .background {
@@ -42,7 +44,10 @@ const Content = () =>
 
   const Image = () =>
     <div className='wrapper'>
-      <div><Title>Vamos começar!</Title></div>
+      <div>
+        <Title>Vamos começar!</Title>
+        <p className='navigation-color'>Para navegar pelo questionário, utilize as setas no canto inferior esquerdo.</p>
+      </div>
       <style jsx>{`
         @media only screen and (max-width: 720px) {
           .wrapper {
@@ -55,6 +60,7 @@ const Content = () =>
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
           }
         }
       `}</style>

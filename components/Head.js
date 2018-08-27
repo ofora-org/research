@@ -10,7 +10,7 @@ const CustomHead = () =>
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' rel='stylesheet' />
       {/*<meta property='og:type' content='article' />*/}
       <meta property='og:title' content='Pesquisa Fora' />
-      <meta property='og:image' content='' />
+      <meta property='og:image' content='https://pesquisa.ofora.org/static/ogimage.jpg' />
       <meta property='og:description' content='Descrição para Pesquisa Fora' />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable='no' />
       <link rel='icon' type='image/png' sizes='16x16' href='https://ofora.org/static/favicon-16x16.png' />
