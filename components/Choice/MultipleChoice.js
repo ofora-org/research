@@ -37,6 +37,7 @@ const MultipleChoice = ({
         display: flex;
         flex-flow: column wrap;
         align-items: flex-start;
+        overflow-x: scroll;
       }
       @media only screen and (min-width: 960px) {
         div {
