@@ -11,8 +11,8 @@ const Survey7 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Com qual cor ou raça você se identifica?</span></Title>
-    <Subtitle>Selecione uma opção:</Subtitle>
+    <Title><span className='title'>Com qual cor ou descendência você se identifica?</span></Title>
+    <Subtitle>Pode selecionar várias opções:</Subtitle>
     <SingleChoice
       other='Outro, me identifico como:'
       choices={[
