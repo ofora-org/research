@@ -12,7 +12,7 @@ const Survey9 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Quais 3 palavras melhor representam sua experiência nos espaços públicos de convívio* de São Paulo?</span></Title>
+    <Title><span className='title'>Com base na sua experiência dos espaços públicos de convívio* de São Paulo quais são as 3 palavras que melhor a descrevem?</span></Title>
     <Subtitle>Selecione até três opções abaixo:</Subtitle>
     <MultipleChoice
       max={3}

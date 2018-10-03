@@ -12,7 +12,7 @@ const Survey14 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Nos últimos 3 meses, com que frequência você saiu para curtir* a cidade de São Paulo? </span></Title>
+    <Title><span className='title'>Nos últimos 3 meses, com que frequência você saiu para aproveitar espaços públicos de convívio* de São Paulo?</span></Title>
     <Subtitle>Selecione uma opção:</Subtitle>
     <SingleChoice
       choices={[
