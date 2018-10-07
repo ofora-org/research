@@ -3,28 +3,33 @@ import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import AsteriscNote from '../AsteriscNote';
+import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey11 = () =>
+const Survey11 = (props) =>
   <ContentWrapper
-    left={<Content />}
+    left={<Content {...props} />}
   />
 
 const Content = () =>
   <div className='content'>
-    <Title><span className='title'>Quais são seus espaços públicos de convívio* favoritos de São Paulo?</span></Title>
-    <Subtitle>Se não souber o nome oficial, pode indicar o nome que você usa para o local e uma rua ou ponto próximo!</Subtitle>
-    <div className='formGroup'>
-      <label><span>#1</span> Favorito</label>
-      <input type='text' placeholder='Digite aqui sua resposta' />
-    </div>
-    <div className='formGroup'>
-      <label><span>#2</span> Favorito</label>
-      <input type='text' placeholder='Digite aqui sua resposta' />
-    </div>
-    <div className='formGroup'>
-      <label><span>#3</span> Favorito</label>
-      <input type='text' placeholder='Digite aqui sua resposta' />
-    </div>
+    <Title><span className='title'>Você tem espaço(s) público(s) de convívio* favorito(s) em São Paulo?</span></Title>
+    <Subtitle>Em caso de ter, indique quais na caixa de texto.</Subtitle>
+    <SingleChoice
+      choices={['Não']}
+      onChange={itemValue => onChange(21, {...value, 1: itemValue})}
+      value={value && value[2]}
+      other='Sim, quais?'
+      otherPlaceholder='Cite aqui quais são, é importante!'
+    />
+    <Title><span className='title'>Você participa ou já participou de grupos que organizam atividades ou influem nos espaços públicos de convívio* de São Paulo?</span></Title>
+    <Subtitle>Incluem associações, coletivos, amigos, etc. Em caso de participar, indique em quais na caixa de texto.</Subtitle>
+    <SingleChoice
+      choices={['Não']}
+      onChange={itemValue => onChange(21, {...value, 2: itemValue})}
+      value={value && value[3]}
+      other='Sim, quais?'
+      otherPlaceholder='Cite aqui quais são, é importante!'
+    />
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
