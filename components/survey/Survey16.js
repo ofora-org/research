@@ -12,7 +12,7 @@ const Survey12 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Porque você não sai mais vezes para curtir* em São Paulo?</span></Title>
+    <Title><span className='title'>Porque você não sai mais vezes para aproveitar os espaços públicos de convívio* de São Paulo?</span></Title>
     <Subtitle>Pode usar só palavras-chave!</Subtitle>
     <textarea
       type='text'
