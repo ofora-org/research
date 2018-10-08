@@ -10,7 +10,7 @@ const Survey11 = (props) =>
     left={<Content {...props} />}
   />
 
-const Content = () =>
+const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Você tem espaço(s) público(s) de convívio* favorito(s) em São Paulo?</span></Title>
     <Subtitle>Em caso de ter, indique quais na caixa de texto.</Subtitle>
