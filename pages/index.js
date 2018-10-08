@@ -12,7 +12,6 @@ import Survey4 from 'components/survey/Survey4'
 import Survey5 from 'components/survey/Survey5'
 import Survey6 from 'components/survey/Survey6'
 import Survey7 from 'components/survey/Survey7'
-import Survey8 from 'components/survey/Survey8'
 import Survey9 from 'components/survey/Survey9'
 import Survey10 from 'components/survey/Survey10'
 import Survey11 from 'components/survey/Survey11'
@@ -49,7 +48,6 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey5 onChange={onChangeHandler} key={5} value={value['5'] ? value['5'] : {}} />,
         <Survey6 onChange={onChangeHandler} key={6} value={value['6']} />,
         <Survey7 onChange={onChangeHandler} key={7} value={value['7']} />,
-        <Survey8 onChange={onChangeHandler} key={8} value={value['8']} />,
         <Survey9 onChange={onChangeHandler} key={9} value={value['9']} />,
         <Survey10 onChange={onChangeHandler} key={10} value={value['10']} />,
         <Survey11 onChange={onChangeHandler} key={11} value={value} />,
