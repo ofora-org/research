@@ -17,7 +17,7 @@ const Content = ({value, onChange}) =>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(21, {...value, 1: itemValue})}
-      value={value && value[2]}
+      value={value && value[1]}
       other='Sim, quais?'
       otherPlaceholder='Cite aqui quais são, é importante!'
     />
@@ -26,7 +26,7 @@ const Content = ({value, onChange}) =>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(21, {...value, 2: itemValue})}
-      value={value && value[3]}
+      value={value && value[2]}
       other='Sim, quais?'
       otherPlaceholder='Cite aqui quais são, é importante!'
     />
