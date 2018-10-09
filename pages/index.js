@@ -57,7 +57,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
         <Survey15 onChange={onChangeHandler} key={15} value={value['15']} />,
         ...(value[14] && (value[14] !== '5 a 7 vezes por semana') ? [<Survey16 onChange={onChangeHandler} key={16} value={value['16']} />] : []),
         <Survey19 onChange={onChangeHandler} key={19} value={value['19']} />,
-        <Survey20 onChange={onChangeHandler} key={20} value={value['20'] ? value['20'] : {} } />,
+        <Survey20 onChange={onChangeHandler} key={20} value={value['20'] ? value['20'] : [] } />,
         <Survey21 onChange={onChangeHandler} key={21} value={value['21']} />,
         <Survey26 onChange={onChangeHandler} key={26} value={value['26']} />,
         <Survey27 onChange={onChangeHandler} key={27} value={value['27']} />,
