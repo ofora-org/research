@@ -22,12 +22,12 @@ const LeftContent = ({onChoiceChange, onChange, value}) =>
         "Parelheiros/Marsilac",
         "Socorro/Grajaú/Cd. Dutra",
         "Jaçanã/Tremembé",
-        "M’Boi Mirim/Jrds.  ngela e S. Luís",
-        "Perus/Anhangüera",
+        "M’Boi Mirim/Jrds. Ângela",
+        "Perus/Anhanguera",
         "Butantã/Morumbi/V. Sônia",
         "Pirituba/Jaguara/Jaraguá",
         "São Mateus/São Rafael",
-        "Penha/Cangaíba/V. Matilde/Artur Alvim",
+        "Penha/V. Matilde/Artur Alvim",
         "Lapa/Barra Funda/Jaguaré/Perdizes",
         "Ipiranga/Cursino/Sacomã",
         "Campo Limpo/V. Andrade",
@@ -48,8 +48,8 @@ const LeftContent = ({onChoiceChange, onChange, value}) =>
         "Mooca/Brás/Pari/Belém/Tatuapé",
         "Pinheiros/Itaim Bibi/Jd. Paulista",
         "Vila Mariana/Saúde/Moema",
-        "Sé/Liberdade/St. Cecília/Bela Vista",
-        "Itaquera/Pq. Carmo/J. Bonifácio/Cd. Líder",
+        "Sé/Liberdade/S.Cecília/Bela Vista",
+        "Itaquera/Pq. Carmo/Cd. Líder",
         "Aricanduva/Carrão/V. Formosa"
       ]}
       onChange={itemValue => onChange(19,itemValue)}
