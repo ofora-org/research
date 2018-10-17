@@ -21,7 +21,7 @@ const Content = ({value, onChange}) =>
       value={value}
       rows="6"
     />
-    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade..</AsteriscNote>
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;
