@@ -12,12 +12,12 @@ const Survey11 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Você tem espaço(s) público(s) de convívio* favorito(s) em São Paulo?</span></Title>
-    <Subtitle>Em caso de ter, indique quais na caixa de texto.</Subtitle>
+    <Title><span className='title'>Você participa ou já participou de grupos que organizam atividades ou influem nos espaços públicos de convívio* de São Paulo?</span></Title>
+    <Subtitle>Incluem associações, coletivos, amigos, etc. Em caso de participar, indique em quais na caixa de texto.</Subtitle>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(22, itemValue)}
-      value={value && value[1]}
+      value={value}
       other='Sim, quais?'
       otherPlaceholder='Cite aqui quais são, é importante!'
     />
