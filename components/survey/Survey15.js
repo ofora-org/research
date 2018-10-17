@@ -21,7 +21,7 @@ const Content = ({value, onChange}) =>
       value={value}
       rows="6"
     />
-    <AsteriscNote>* Tempo livre, atividades sociais, culturais, esportivas, lazer, etc.</AsteriscNote>
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
 
     <style jsx>{`
       .content {
