@@ -25,7 +25,7 @@ const Content = ({value, onChange}) =>
       onChange={itemValue => onChange(14,itemValue)}
       value={value}
     />
-    <AsteriscNote>* Tempo livre, atividades sociais, culturais, esportivas, lazer, etc.</AsteriscNote>
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;
