@@ -12,9 +12,9 @@ const Survey28 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title>
-      <span className='title'>Se tiver quaisquer outros comentários e reflexões, bota pra Fora:</span>
+      <span className='title'>Para finalizar, qual é a transformação prática que você faria na cidade de São Paulo se não tivessem limitações?</span>
     </Title>
-    <Subtitle>Caso não tenha, continue para finalizar.</Subtitle>
+    <Subtitle>Pode usar só palavras-chave!</Subtitle>
     <input
       type='text'
       placeholder='Digite aqui sua resposta'
