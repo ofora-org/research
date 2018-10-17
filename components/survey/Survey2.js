@@ -46,7 +46,7 @@ const Content = () =>
     <div className='wrapper'>
       <div>
         <Title>Vamos começar!</Title>
-        <p className='navigation-color'>Para navegar pelo questionário, utilize as setas no canto inferior direito ou no teclado. No celular, use os dedos para subir, descer e passar de tela.</p>
+        <p className='navigation-color'>Para navegar, utilize as setas no canto inferior direito ou no teclado. No celular, use os dedos para subir, descer e passar de tela.</p>
       </div>
       <style jsx>{`
         @media only screen and (max-width: 720px) {
