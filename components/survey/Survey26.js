@@ -2,7 +2,7 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import SingleChoice from 'components/Choice/SingleChoice'
+import MultipleChoice from 'components/Choice/MultipleChoice'
 import AsteriscNote from '../AsteriscNote';
 
 const Survey26 = props =>
@@ -12,18 +12,20 @@ const Survey26 = props =>
 
 const Content = ({onChange, value}) =>
   <div className='content'>
-    <Title><span className='title'>Na sua vivência em São Paulo, com que frequência você:<br />
-    Organiza ou gostaria de organizar atividades culturais, sociais e/ou econômicas em espaços públicos de convívio*
-    </span></Title>
-    <Subtitle>Selecione uma opção:</Subtitle>
-    <SingleChoice
+    <Title><span className='title'>Em uma semana comum, com quais das situações abaixo você lida pelo menos 1 vez nos espaços públicos de convívio* de São Paulo?</span></Title>
+    <Subtitle>Pode selecionar várias opções:</Subtitle>
+    <MultipleChoice
       choices={[
-        'Frequentemente (ou sempre)',
-        'Às vezes',
-        'Raramente (ou nunca)'
+        'Discriminação (racismo, machismo, homofobia e/ou outro)',
+        'Insegurança, risco, perigo ou medo',
+        'Dificuldades para suas necessidades físicas, mentais ou sensoriais',
+        'Repressão de autoridades (policiais, seguranças, guardas, outras)',
+        'Restrições para mobilidade (acesso, custos, trânsito, lotação)',
+        'Degradação, lixo, maus cheiros e/ou esgoto'
       ]}
       onChange={itemValue => onChange(26,itemValue)}
       value={value}
+      other='Outras, quais?'
     />
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
