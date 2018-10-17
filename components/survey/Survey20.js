@@ -19,7 +19,6 @@ const Content = ({onChange, value}) =>
         'Moto (própria ou emprestada)',
         'Carro (próprio, emprestado e carona)',
         'Uber, táxi ou semelhante',
-        'Uber/táxi (semelhantes)',
         'Ônibus',
         'Metrô',
         'Trem'
