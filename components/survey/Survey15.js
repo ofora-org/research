@@ -50,7 +50,7 @@ const Image = () =>
           top: 0; left: 0; right: 0; bottom: 0;
           background-image: url('/static/image4.jpg');
           background-size: cover;
-          background-position: bottom center;
+          background-position: center center;
         }
     `}</style>
   </div>
