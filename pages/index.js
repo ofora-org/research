@@ -30,7 +30,6 @@ import Survey23 from 'components/survey/Survey23';
 import Survey24 from 'components/survey/Survey24';
 import Survey25 from 'components/survey/Survey25';
 import Survey26 from 'components/survey/Survey26';
-import Survey27 from 'components/survey/Survey27';
 import Survey28 from 'components/survey/Survey28';
 import Survey29 from 'components/survey/Survey29';
 
