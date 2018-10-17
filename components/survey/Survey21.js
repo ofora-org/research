@@ -16,17 +16,8 @@ const Content = ({value, onChange}) =>
     <Subtitle>Em caso de ter, indique quais na caixa de texto.</Subtitle>
     <SingleChoice
       choices={['Não']}
-      onChange={itemValue => onChange(21, {...value, 1: itemValue})}
-      value={value && value[1]}
-      other='Sim, quais?'
-      otherPlaceholder='Cite aqui quais são, é importante!'
-    />
-    <Title><span className='title'>Você participa ou já participou de grupos que organizam atividades ou influem nos espaços públicos de convívio* de São Paulo?</span></Title>
-    <Subtitle>Incluem associações, coletivos, amigos, etc. Em caso de participar, indique em quais na caixa de texto.</Subtitle>
-    <SingleChoice
-      choices={['Não']}
-      onChange={itemValue => onChange(21, {...value, 2: itemValue})}
-      value={value && value[2]}
+      onChange={itemValue => onChange(21, itemValue)}
+      value={value}
       other='Sim, quais?'
       otherPlaceholder='Cite aqui quais são, é importante!'
     />
