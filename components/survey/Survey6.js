@@ -2,7 +2,7 @@ import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
-import SingleChoice from 'components/Choice/SingleChoice'
+import MultipleChoice from 'components/Choice/MultipleChoice'
 
 const Survey6 = (props) =>
   <ContentWrapper
@@ -14,7 +14,7 @@ const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Com qual gênero você se identifica?</span></Title>
     <Subtitle>Selecione uma opção:</Subtitle>
-    <SingleChoice
+    <MultipleChoice
       other='Outro, me identifico como:'
       choices={[
         'Mulher',
