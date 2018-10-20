@@ -31,7 +31,6 @@ const Content = ({value, onChange}) =>
       .title {
         padding-right: 90px;
         display: block;
-        font-size: 0.8em
       }
       .formGroup {
         margin-bottom: 1em;
@@ -39,7 +38,6 @@ const Content = ({value, onChange}) =>
       label {
         display: block;
         font-weight: bold;
-        font-size: 1.8em;
         color: #0009FF;
       }
       label span {
