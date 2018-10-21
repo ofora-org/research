@@ -12,7 +12,7 @@ const Survey12 = (props) =>
 
 const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>Porque você não sai mais vezes para curtir* em São Paulo?</span></Title>
+    <Title><span className='title'>Porque você não sai mais vezes para aproveitar os espaços públicos de convívio* de São Paulo?</span></Title>
     <Subtitle>Pode usar só palavras-chave!</Subtitle>
     <textarea
       type='text'
@@ -21,7 +21,7 @@ const Content = ({value, onChange}) =>
       value={value}
       rows="6"
     />
-    <AsteriscNote>* Tempo livre, atividades sociais, culturais, esportivas, lazer, etc.</AsteriscNote>
+    <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
       .content {
         display: flex;

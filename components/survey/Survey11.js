@@ -19,7 +19,7 @@ const Content = ({value, onChange}) =>
       <CEPInput onChange={e => onChange(11,{ ...value[11], cep: e.target.value })} value={value['11'] && value['11'].cep} />
     </div>
     <div className='formGroup'>
-      <label className='navigation-color'>Não tenho ou não quero dar meu CEP, mas moro em:</label>
+      <label className='navigation-color'>{value['10'] && value['10'].includes('Moro') ?  'Nome do bairro:' : 'Nome da cidade:' }</label>
       <input
         type='text'
         maxLength={60}

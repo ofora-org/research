@@ -14,7 +14,7 @@ const Content = () =>
     <div className='background' />
     <div>
       <Title>
-        <span className='title'>As perguntas a seguir são sobre suas experiências nos espaços públicos de convívio em São Paulo, ou seja, como você vive as ruas, praças, parques, quadras e outras áreas comuns da cidade.</span>
+        <span className='title'>O Fora quer saber suas experiências nos espaços públicos de convívio em São Paulo. Como você vive as ruas, praças, parques, quadras e outras áreas comuns da cidade?< /span>
       </Title>
     </div>
     <style jsx>{`
@@ -46,7 +46,7 @@ const Content = () =>
     <div className='wrapper'>
       <div>
         <Title>Vamos começar!</Title>
-        <p className='navigation-color'>Para navegar pelo questionário, utilize as setas no canto inferior direito ou no teclado. No celular, use os dedos para subir, descer e passar de tela.</p>
+        <p className='navigation-color'>Para navegar, utilize as setas no canto inferior direito ou no teclado. No celular, use os dedos para subir, descer e passar de tela.</p>
       </div>
       <style jsx>{`
         @media only screen and (max-width: 720px) {

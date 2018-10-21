@@ -1,30 +1,25 @@
 import React from 'react'
 import ContentWrapper from 'components/ContentWrapper'
 import Title from 'components/Title'
-import SingleChoice from 'components/Choice/SingleChoice'
+import Subtitle from 'components/Subtitle'
 import AsteriscNote from '../AsteriscNote';
-import Subtitle from '../Subtitle';
+import SingleChoice from 'components/Choice/SingleChoice'
 
-const Survey22 = props =>
+const Survey11 = (props) =>
   <ContentWrapper
     left={<Content {...props} />}
   />
 
-const Content = ({onChange, value}) =>
+const Content = ({value, onChange}) =>
   <div className='content'>
-    <Title><span className='title'>
-      Na sua vivência em São Paulo, com que frequência você:<br />
-      Sofre com racismo, machismo, homofobia e/ou outras discriminações em espaços públicos de convívio*
-    </span></Title>
-    <Subtitle>Selecione uma opção:</Subtitle>
+    <Title><span className='title'>Você participa ou já participou de grupos que organizam atividades ou influem nos espaços públicos de convívio* de São Paulo?</span></Title>
+    <Subtitle>Incluem associações, coletivos, amigos, etc. Em caso de participar, indique em quais na caixa de texto.</Subtitle>
     <SingleChoice
-      choices={[
-        'Frequentemente (ou sempre)',
-        'Às vezes',
-        'Raramente (ou nunca)'
-      ]}
-      onChange={itemValue => onChange(22,itemValue)}
+      choices={['Não']}
+      onChange={itemValue => onChange(22, itemValue)}
       value={value}
+      other='Sim, quais?'
+      otherPlaceholder='Cite aqui quais são, é importante!'
     />
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
@@ -42,6 +37,13 @@ const Content = ({onChange, value}) =>
       }
       label {
         display: block;
+        font-weight: bold;
+        color: #0009FF;
+      }
+      label span {
+        -webkit-text-stroke: 1px blue;
+        color: transparent;
+        font-style: italic;
       }
       @media only screen and (min-width: 720px) {
         .title {
@@ -51,4 +53,4 @@ const Content = ({onChange, value}) =>
     `}</style>
   </div>
 
-export default Survey22
+export default Survey11
