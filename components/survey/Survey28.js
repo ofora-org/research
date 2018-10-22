@@ -13,7 +13,7 @@ const Survey28 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title>
-      <span className='title'>Para finalizar, cite o que você mais gostaria de poder viver nos espaços públicos de convívio* da cidade de São Paulo:</span>
+      <span className='title'>Para finalizar: descreva brevemente como seria o espaço público de convívio ideal para você em São Paulo.</span>
     </Title>
     <Subtitle>Pode usar só palavras-chave!</Subtitle>
     <input
