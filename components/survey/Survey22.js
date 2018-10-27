@@ -19,7 +19,7 @@ const Content = ({value, onChange}) =>
       onChange={itemValue => onChange(22, itemValue)}
       value={value}
       other='Sim'
-      otherPlaceholder='Cite aqui quais'
+      otherPlaceholder='Insira aqui quais'
     />
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`
