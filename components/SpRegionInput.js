@@ -184,7 +184,7 @@ className={selected && selected.indexOf("Cd. Tiradentes/Iguatemi") !== -1 && 'se
       <path
         id="Sé/Liberdade/S.Cecília/Bela Vista"
         onClick={onClick}
-        className={selected && selected.indexOf("Sé/Liberdade/St.Cecília/Bela Vista") !== -1 && 'selected'}
+        className={selected && selected.indexOf("Sé/Liberdade/S.Cecília/Bela Vista") !== -1 && 'selected'}
         d="M259.5 240c1.2-.4 2.1.4 3 .9 2.6.6 10.6 10.9 10.1 13.2-.5 1.9-2 2-3.7 1.5-2.9-1-5 .3-6 2.8-3.7 9.5-11.8 10.7-20.4 10.9-.6 0-1.3.1-1.6-.2-10.4-7.8-23.4-11.6-32.2-21.8-2.9-3.3-6.2-6.8-11.5-5.6-.5.1-1.1-.4-1.6-.5-3.2-1-7.8-1.5-7.9-5.2-.2-3.4 4.1-4.5 7.1-5.6 1.6-.6 3.3-1.2 3.9-3.1 1.9-6.7 6.1-12.5 6.2-20 .1-5.9 3.7-10.2 9.8-11.9 1.1.9 2.3 1 3.7.8 7.5 1.4 15.2 1.4 22.8 1.5 4.1.1 6.4 1.6 5.7 6.2-1 6.3.6 12.5-1.7 19.1-1.5 4.4.5 11.1 3.1 15.6 1.4 2.6 7.1 2.6 11.2 1.4z"
       />
       <path
