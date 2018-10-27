@@ -16,7 +16,7 @@ const Content = ({onChange, value}) =>
     <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       choices={[
-        'Nada',
+        'Nenhuma',
         'Discriminação (racismo, machismo, homofobia e/ou outro)',
         'Insegurança, risco, perigo ou medo',
         'Dificuldades para suas necessidades físicas, mentais ou sensoriais',

@@ -16,11 +16,12 @@ const Content = ({value, onChange}) =>
       <span className='title'>Para finalizar, cite o que você mais gostaria de poder viver nos espaços públicos de convívio* da cidade de São Paulo:</span>
     </Title>
     <Subtitle>Pode usar só palavras-chave!</Subtitle>
-    <input
+    <textarea
       type='text'
       placeholder='Digite aqui sua resposta'
       onChange={e => onChange(28,e.target.value)}
       value={value}
+      rows="6"
     />
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
     <style jsx>{`

@@ -18,7 +18,7 @@ const Content = ({value, onChange}) =>
       choices={['Não']}
       onChange={itemValue => onChange(21, itemValue)}
       value={value}
-      other='Sim, quais?'
+      other='Sim'
       otherPlaceholder='Cite aqui quais são, é importante!'
     />
     <AsteriscNote>* Ruas, praças, parques, quadras, ou outras áreas abertas para aproveitar a cidade.</AsteriscNote>
