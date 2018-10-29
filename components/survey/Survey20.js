@@ -15,7 +15,7 @@ const Content = ({onChange, value}) =>
     <Subtitle>Pode selecionar várias opções:</Subtitle>
     <MultipleChoice
       choices={[
-        'À pé, bicicleta e/ou skate',
+        'A pé, bicicleta e/ou skate',
         'Moto (própria ou emprestada)',
         'Carro (próprio, emprestado e carona)',
         'Uber, táxi ou semelhante',
