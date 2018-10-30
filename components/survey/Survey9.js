@@ -18,7 +18,7 @@ const Content = ({value, onChange}) =>
       max={3}
       other='Outras:'
       choices={[
-        'Bem-Estar',
+        'Bem-estar',
         'Repressão',
         'Resistência',
         'Estresse',
