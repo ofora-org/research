@@ -94,7 +94,7 @@ const Index = ({onChangeHandler, onNavigateHandler, value, setValue}) =>
     `}</style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119351761-1"></script>
   <script dangerouslySetInnerHTML={{__html:
-    "window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'UA-119351761-1');"
+    "window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'UA-119351761-2');"
     }} />
   </div>
 
