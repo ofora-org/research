@@ -31,7 +31,6 @@ const Content = ({value, onChange}) =>
       }
       @media only screen and (min-width: 720px) {
         .title {
-          padding-right: 140px;
         }
       }
     `}</style>

@@ -11,6 +11,7 @@ const Choice = ({children, onClick, isSelected}) =>
         margin: 4px 5px;
         transition: .2s background;
         max-width: 210px;
+        line-break: loose;
       }
     `}</style>
   </div>

@@ -13,7 +13,7 @@ const Survey11 = (props) =>
 const Content = ({value, onChange}) =>
   <div className='content'>
     <Title><span className='title'>Você tem espaço(s) público(s) de convívio* favorito(s) em São Paulo?</span></Title>
-    <Subtitle>Caso Tenha, indique quais na caixa de texto.</Subtitle>
+    <Subtitle>Caso tenha, indique quais na caixa de texto.</Subtitle>
     <SingleChoice
       choices={['Não']}
       onChange={itemValue => onChange(21, itemValue)}
